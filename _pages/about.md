@@ -9,7 +9,12 @@ redirect_from:
 
 Welcome to the Yang Group in the College of Civil and Transportation Engineering at Shenzhen University. We aim to see, understand, predict, and design the behevior of structural materials (rocks, concrete and high-performance composites) under extreme loading conditions, through a combination of experiments, physics-based theoretical and computational modeling, artifical intelligence, and additive manufacturing. Our goal is to ensure the success and safety of real-world applications in critical sectors where extreme scenarios prevail, including underground engineering, defense, energy, and space. Our current research topics and recent publications can be found our [Research]([/research/]) and [Publications]([/publications/]) pages. The following figure shows the loading conditions we are interested in.
 
-![Impact Loading Scenarios in Life and Laboratory](/images/ImpactLoading.jpg)
+<figure style="width: 100%; text-align: center;">
+  <img src="/images/ImpactLoading.jpg" alt="Impact Loading Figure" style="width: 100%;">
+  <figcaption style="font-style: italic; font-size: 0.8em; color: gray;">
+    Impact Loading Scenarios in Life and Laboratory
+  </figcaption>
+</figure>
 
 We are currently seeking researchers, postdoctoral research fellows, graduate and master students to join our group in Fall 2026. If you are interested in working with our group, please see the [Opportunities]([/opportunities/]) page.
 
