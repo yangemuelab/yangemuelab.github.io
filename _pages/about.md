@@ -1,15 +1,15 @@
 ---
 permalink: /
-title: "Academic Pages is a ready-to-fork GitHub Pages template for academic personal websites"
+title: "Welcome to the Yang Group!"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-This is the front page of a website that is powered by the [Academic Pages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the repository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. Incidentally, these same features make it a great template for anyone that needs to show off a professional template!
+Welcome to the Yang Group in the College of Civil and Transportation Engineering at Shenzhen University. We aim to see, understand, predict, and design the behevior of structural materials (rocks, concrete and high-performance composites) under extreme loading conditions, through a combination of experiments, physics-based theoretical and computational modeling, artifical intelligence, and additive manufacturing. Our goal is to ensure the success and safety of real-world applications in critical sectors where extreme scenarios prevail, including underground engineering, defense, energy, and space. Our current research topics and recent publications can be found our [Research]([https://yangemuelab.github.io/research/]) and [Publications]([https://yangemuelab.github.io/publications/])
 
- You can fork [this template](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and Markdown files, add your own PDFs and other content, and have your own site for free, with no ads!
+We are currently seeking researchers, postdoctoral research fellows, graduate and master students to join our group in Fall 2026. If you are interested in working with our group, please see the [Opportunities]([https://yangemuelab.github.io/Opportunities/]) page.
 
 A data-driven personal website
 ======
