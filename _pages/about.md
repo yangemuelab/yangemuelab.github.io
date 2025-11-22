@@ -9,14 +9,14 @@ redirect_from:
 
 {% include base_path %}
 
-<div style="text-align: center; margin-bottom: 40px; margin-top: 0;">
+<div style="text-align: center; margin-bottom: 0px; margin-top: 0;">
   <p style="font-size: 0.9em; font-style: italic; color: #7f8c8d;">
     "Extreme Mechanics for Underground Engineering"
   </p>
 </div>
 
 <p style="font-size: 1.0em; line-height: 1.6; color: #333;">
-  Welcome to the Yang Group in the College of Civil and Transportation Engineering at Shenzhen University.. Our mission is to <strong>see, understand, predict, and design</strong> the behavior of structural materials (rocks, concrete, and high-performance composites) under <strong>extreme loading conditions</strong>, through a combination of experiments, physics-based theoretical and computational modeling, artifical intelligence, and additive manufacturing. Our goal is to ensure the success and safety of real-world applications in critical sectors where extreme loading scenarios prevail, including <span style="color: #c0392b; font-weight: 500;">underground engineering</span>, <span style="color: #2980b9; font-weight: 500;">defense</span>, <span style="color: #16a085; font-weight: 500;">energy</span>, and <span style="color: #8e44ad; font-weight: 500;">space</span>. You can explore our current work on our <a href="/research/">Research</a> and <a href="/publications/">Publications</a> pages.
+  Welcome to the Yang Group in the College of Civil and Transportation Engineering at Shenzhen University. Our mission is to <strong>see, understand, predict, and design</strong> the behavior of structural materials (rocks, concrete, and high-performance composites) under <strong>extreme loading conditions</strong>, through a combination of experiments, physics-based theoretical and computational modeling, artifical intelligence, and additive manufacturing. Our goal is to ensure the success and safety of real-world applications in critical sectors where extreme loading scenarios prevail. We are particularly interested in applying our foundamental research to <span style="color: #c0392b; font-weight: 500;">underground engineering</span>, but our research also has wide applications in <span style="color: #2980b9; font-weight: 500;">defense</span>, <span style="color: #16a085; font-weight: 500;">energy</span>, and <span style="color: #8e44ad; font-weight: 500;">space</span>. You can explore our current work on our <a href="/research/">Research</a> and <a href="/publications/">Publications</a> pages.
 </p>
 
 <div style="background-color: #e8f6f3; border-left: 5px solid #1abc9c; padding: 20px; margin: 30px 0; border-radius: 4px;">
