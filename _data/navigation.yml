@@ -24,7 +24,7 @@ main:
     url: /opportunities/
 
   - title: "About Me"
-    url: /pi/
+    url: /aboutme/
     
   # - title: "CV"
   #   url: /cv-json/
