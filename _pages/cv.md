@@ -18,25 +18,25 @@ redirect_from:
 ## 🎓 Education
 <table style="width:60%; border:none; border-collapse:collapse;font-size: 1rem;">
   <tr style="border-bottom:none;">
-    <td width="75%" style="border:none;vertical-align: top;"><strong>Johns Hopkins University</strong><br>Postdoc in Mechanical Engineering</td>
-    <td width="25%" style="border:none; text-align:right;vertical-align: top;">2023 - 2025</td>
+    <td width="75%" style="border:none;"><strong>Johns Hopkins University</strong><br>Postdoc in Mechanical Engineering</td>
+    <td width="25%" style="border:none; text-align:right;">2023 - 2025</td>
   </tr>
   <tr style="border-bottom:none;">
-    <td style="border:none;vertical-align: top;"><strong>The University of Sydney</strong><br>Ph.D. in Civil Engineering</td>
-    <td style="border:none; text-align:right;vertical-align: top;">2022</td>
+    <td style="border:none;"><strong>The University of Sydney</strong><br>Ph.D. in Civil Engineering</td>
+    <td style="border:none; text-align:right;">2022</td>
   </tr>
   <tr style="border-bottom:none;">
-    <td style="border:none;vertical-align: top;"><strong>Northeastern University</strong><br>M.S. in Mining Engineering</td>
-    <td style="border:none; text-align:right;vertical-align: top;">2018</td>
+    <td style="border:none;"><strong>Northeastern University</strong><br>M.S. in Mining Engineering</td>
+    <td style="border:none; text-align:right;">2018</td>
   </tr>
   <tr style="border-bottom:none;">
-    <td style="border:none;vertical-align: top;"><strong>Northeastern University</strong><br>B.S. in Mining Engineering</td>
-    <td style="border:none; text-align:right;vertical-align: top;">2015</td>
+    <td style="border:none;"><strong>Northeastern University</strong><br>B.S. in Mining Engineering</td>
+    <td style="border:none; text-align:right;">2015</td>
   </tr>
 </table>
 
 ## 💼 Work Experience
-<table style="width:60%; border:none; border-collapse:collapse;">
+<table style="width:60%; border:none; border-collapse:collapse;font-size: 1rem;">
   <tr style="border-bottom:none;">
     <td width="75%" style="border:none;"><strong>Honor Device Co., Ltd.</strong><br>Senior R&D and Project Manager</td>
     <td width="25%" style="border:none; text-align:right;">Mar 2022 - Aug 2023</td>
