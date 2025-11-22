@@ -92,15 +92,16 @@ redirect_from:
   <i class="fas fa-microscope" style="color: #27ae60; margin-right: 10px;"></i>Research Interests
 </h2>
 
-<div style="display: flex; flex-wrap: wrap; gap: 10px;">
+<div style="display: flex; flex-direction: column; align-items: flex-start; gap: 12px;">
+
   {% capture tag_style %}
     background-color: #f8f9fa; 
     color: #333; 
-    padding: 8px 15px; 
-    border-radius: 20px; 
+    padding: 10px 20px;       /* Made padding slightly larger for vertical look */
+    border-radius: 30px;      /* More rounded */
     border: 1px solid #e0e0e0; 
-    font-size: 0.9em; 
-    box-shadow: 0 2px 2px rgba(0,0,0,0.05);
+    font-size: 1em; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Slightly stronger shadow */
     font-weight: 500;
   {% endcapture %}
 
@@ -109,4 +110,5 @@ redirect_from:
   <span style="{{ tag_style }}">Constitutive Modeling</span>
   <span style="{{ tag_style }}">Planetary Defense</span>
   <span style="{{ tag_style }}">AI-driven Composite Design</span>
+
 </div>
