@@ -9,6 +9,14 @@ redirect_from:
 
 {% include base_path %}
 
+Click below to download the CV as a PDF, or view it directly on this page.
+
+<div style="text-align: center; margin-top: 20px;">
+  <a href="/files/CV_Lei Yang.pdf" target="_blank" class="btn btn--primary btn--large">
+    <i class="fas fa-file-pdf"></i> Download Detailed CV
+  </a>
+</div>
+
 Education
 ======
 * Postdoc in Mechanical Engineering, Johns Hopkins University, 2023 - 2025
