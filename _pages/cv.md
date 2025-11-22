@@ -1,7 +1,7 @@
 ---
 layout: archive
 title: "Principal Investigator"
-permalink: /pi/
+permalink: /aboutme/
 author_profile: true
 redirect_from:
   - /resume
