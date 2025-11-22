@@ -11,7 +11,7 @@ Welcome to the Yang Group in the College of Civil and Transportation Engineering
 
 We are currently seeking researchers, postdoctoral research fellows, graduate and master students to join our group in Fall 2026. If you are interested in working with our group, please see the [Opportunities](/opportunities/) page.
 
-## 📰 Latest News
+## 📢 Latest News
 
 * **Dec 2025:** Dr. Lei Yang has completed his postdoctoral training in HEMI at Johns Hopkins University.
 * **Nov 2025:** Dr. Lei Yang has accepted an Research Assistant Professor position in ME department at PolyU.
