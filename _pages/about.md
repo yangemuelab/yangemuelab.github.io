@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Welcome to the Yang Group!"
+title: "Welcome!"
 author_profile: true
 redirect_from: 
   - /about/
@@ -14,6 +14,6 @@ We are currently seeking researchers, postdoctoral research fellows, graduate an
 ## 📢 Latest News
 
 * **Dec 2025:** Dr. Lei Yang has completed his postdoctoral training in Hopkins Extreme Material Institute at Johns Hopkins University.
-* **Nov 2025:** Dr. Lei Yang has accepted an Research Assistant Professor position in the department of Mechanical Engineering at Hong Kong Polytechnic University.
+* **Nov 2025:** Dr. Lei Yang has accepted an Research Assistant Professor position in the Department of Mechanical Engineering at Hong Kong Polytechnic University.
 * **Nov 2025:** Dr. Lei Yang received the “Excellent Young Scientists Fund Program (Overseas)” from the Chinese Government.
 * **May 2025:** Our paper on "A mechanism‐based constitutive model for competent rocks subjected to impact loading" was published in *JGR: Solid Earth*.
