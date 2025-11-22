@@ -11,7 +11,7 @@ redirect_from:
 
 <div style="text-align: center; margin-bottom: 0px; margin-top: 0;">
   <p style="font-size: 0.9em; font-style: italic; color: #7f8c8d;">
-    "Extreme Mechanics for Underground Engineering"
+    "EMUE | Extreme Mechanics for Underground Engineering"
   </p>
 </div>
 
