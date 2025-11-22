@@ -9,10 +9,8 @@ redirect_from:
 
 {% include base_path %}
 
-Click below to download my CV for details, or view it briefly on this page.
-
-<div style="text-align: center; margin-top: 20px;">
-  <a href="/files/CV_Lei Yang.pdf" target="_blank" class="btn btn--primary btn--large">
+<div style="text-align: left; margin-top: 0px; margin-bottom: 20px;">
+  <a href="/files/CV_Lei_Yang.pdf" target="_blank" class="btn btn--primary btn--large">
     <i class="fas fa-file-pdf"></i> Download Detailed CV
   </a>
 </div>
