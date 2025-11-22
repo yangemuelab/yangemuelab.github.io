@@ -10,8 +10,8 @@ redirect_from:
 {% include base_path %}
 
 <div style="text-align: center; margin-bottom: 0px; margin-top: 0;">
-  <p style="font-size: 0.9em; font-style: italic; color: #7f8c8d;">
-    "EMUE | Extreme Mechanics for Underground Engineering"
+  <p style="font-size: 0.9em; color: #7f8c8d;">
+    "EMUE | <em>Extreme Mechanics for Underground Engineering</em>"
   </p>
 </div>
 
