@@ -61,3 +61,33 @@ author_profile: true
   </div>
 
 </div>
+
+<script>
+console.log("Publication Script Loaded Successfully"); // This helps us debug
+
+function toggle_content(id) {
+  // 1. Find the hidden box
+  var element = document.getElementById(id);
+  
+  // Debugging check: Does the box exist?
+  if (!element) {
+    console.error("Error: Could not find an element with id: " + id);
+    alert("Error: The ID '" + id + "' was not found. Check your HTML!");
+    return;
+  }
+
+  var all_content = document.querySelectorAll('.hidden-content');
+  
+  // 2. Toggle Logic
+  if (element.style.display === "block") {
+    element.style.display = "none";
+  } else {
+    // Close others first
+    all_content.forEach(function(content) {
+      content.style.display = "none";
+    });
+    // Open this one
+    element.style.display = "block";
+  }
+}
+</script>
