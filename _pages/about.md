@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Welcome!"  # Leave empty to use custom header
+title: "Welcome to EMUE Lab!"  # Leave empty to use custom header
 author_profile: true
 redirect_from: 
   - /about/
