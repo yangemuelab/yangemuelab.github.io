@@ -1,33 +1,41 @@
 {% comment %}
-  Renders a single publication item with clean styling
+  Renders a single publication item with fancy card styling
   Usage: {% include publication-item.html pub=publication %}
 {% endcomment %}
 
-<div class="publication-item">
-  <div class="publication-title">
+<article class="publication-card" data-year="{{ include.pub.year }}">
+  <div class="pub-card-header">
+    <div class="pub-year-badge">{{ include.pub.year }}</div>
+    <div class="pub-journal-badge">
+      <i class="fas fa-book"></i>
+      <span>{{ include.pub.journal }}</span>
+    </div>
+  </div>
+  
+  <h3 class="pub-title">
     {{ include.pub.title }}
+  </h3>
+  
+  <div class="pub-authors">
+    <i class="fas fa-users"></i>
+    <span>{{ include.pub.authors | replace: "Lei Yang", "<strong class='author-highlight'>Lei Yang</strong>" }}</span>
   </div>
   
-  <div class="publication-authors">
-    {{ include.pub.authors | replace: "Lei Yang", "<b>Lei Yang</b>" }}
-  </div>
-  
-  <div class="publication-journal">
-    {{ include.pub.journal }}, {{ include.pub.year }}
-  </div>
-  
-  <div class="publication-links">
+  <div class="pub-links">
     {% if include.pub.journal_url %}
-    <a href="{{ include.pub.journal_url }}" target="_blank" class="pub-link">
-      <i class="fas fa-link"></i> Journal URL
+    <a href="{{ include.pub.journal_url }}" target="_blank" class="pub-btn pub-btn-primary" rel="noopener noreferrer">
+      <i class="fas fa-external-link-alt"></i>
+      <span>Read Paper</span>
     </a>
     {% endif %}
     
     {% if include.pub.scholar_url %}
-    <a href="{{ include.pub.scholar_url }}" target="_blank" class="pub-link">
-      <i class="ai ai-google-scholar"></i> Google Scholar
+    <a href="{{ include.pub.scholar_url }}" target="_blank" class="pub-btn pub-btn-scholar" rel="noopener noreferrer">
+      <i class="ai ai-google-scholar"></i>
+      <span>Google Scholar</span>
     </a>
     {% endif %}
   </div>
-</div>
-
+  
+  <div class="pub-card-footer"></div>
+</article>
