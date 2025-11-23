@@ -11,141 +11,81 @@ author_profile: true
 
 {% include base_path %}
 
-<h2 style="margin-top: 30px; margin-bottom: 20px; color: #2c3e50; border-bottom: 2px solid #ecf0f1; padding-bottom: 10px;">
-  <i class="fas fa-book-open" style="color: #3498db; margin-right: 10px;"></i>Selected Journal Articles
+<h2 class="publications-section-title">
+  <i class="fas fa-book-open"></i> Selected Journal Articles
 </h2>
 
-<div style="margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 10px;">
-  
-  <div style="font-size: 1.0em; font-weight: bold; color: #2c3e50; line-height: 1.4;">
-    A mechanism‐based constitutive model for competent rocks subjected to impact loading
-  </div>
+{% for pub in site.data.publications %}
+  {% include publication-item.html pub=pub %}
+{% endfor %}
 
-  <div style="margin-top: 5px; color: #333; font-size: 0.8em;">
-    <b>Lei Yang</b>, Brett S. Kuwik, Shachi Singh, Sohanjit Ghosh, Justin Moreno, Ryan Hurley, K. T. Ramesh
-  </div>
+<style>
+.publications-section-title {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  border-bottom: 2px solid #ecf0f1;
+  padding-bottom: 10px;
+}
 
-  <div style="font-style: italic; color: #666; margin-top: 2px; font-size: 0.8em;">
-    Journal of Geophysical Research: Solid Earth, 2025
-  </div>
+.publications-section-title i {
+  color: #3498db;
+  margin-right: 10px;
+}
 
-  <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px; align-items: center;">
-    
-    <a href="https://doi.org/10.1029/2024JB031101" target="_blank" style="display: inline-flex; align-items: center; gap: 6px; text-decoration: none; color: #2980b9; background-color: #f0f7fc; border: 1px solid #d0e3f0; padding: 3px 14px; border-radius: 25px; font-size: 0.8em; font-weight: 600; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-      <i class="fas fa-link"></i> Journal URL
-    </a>
+.publication-item {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
 
-    <a href="https://scholar.google.com/scholar?hl=zh-CN&as_sdt=0%2C5&q=A+Mechanism-Based+Constitutive+Model+for+Competent+Rocks+Subjected+to+Impact+Loading&btnG=" target="_blank" style="display: inline-flex; align-items: center; gap: 6px; text-decoration: none; color: #2980b9; background-color: #f0f7fc; border: 1px solid #d0e3f0; padding: 3px 14px; border-radius: 25px; font-size: 0.8em; font-weight: 600; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-      <i class="ai ai-google-scholar"></i> Google Scholar
-    </a>
+.publication-title {
+  font-size: 1.0em;
+  font-weight: bold;
+  color: #2c3e50;
+  line-height: 1.4;
+}
 
-  </div>
-</div>
+.publication-authors {
+  margin-top: 5px;
+  color: #333;
+  font-size: 0.8em;
+}
 
-<div style="margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 10px;">
-  
-  <div style="font-size: 1.0em; font-weight: bold; color: #2c3e50; line-height: 1.4;">
-    Extended finite element-based cohesive zone method for modeling simultaneous hydraulic fracture height growth in layered reservoirs
-  </div>
+.publication-journal {
+  font-style: italic;
+  color: #666;
+  margin-top: 2px;
+  font-size: 0.8em;
+}
 
-  <div style="margin-top: 5px; color: #333; font-size: 0.8em;">
-    <b>Lei Yang</b>, Baixi Chen
-  </div>
+.publication-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+  align-items: center;
+}
 
-  <div style="font-style: italic; color: #666; margin-top: 2px; font-size: 0.8em;">
-    Journal of Rock Mechanics and Geotechnical Engineering, 2024
-  </div>
+.pub-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  color: #2980b9;
+  background-color: #f0f7fc;
+  border: 1px solid #d0e3f0;
+  padding: 3px 14px;
+  border-radius: 25px;
+  font-size: 0.8em;
+  font-weight: 600;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  transition: all 0.2s ease;
+}
 
-  <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px; align-items: center;">
-    
-    <a href="https://www.sciencedirect.com/science/article/pii/S1674775524000842" target="_blank" style="display: inline-flex; align-items: center; gap: 6px; text-decoration: none; color: #2980b9; background-color: #f0f7fc; border: 1px solid #d0e3f0; padding: 3px 14px; border-radius: 25px; font-size: 0.8em; font-weight: 600; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-      <i class="fas fa-link"></i> Journal URL
-    </a>
-
-    <a href="https://scholar.google.com/scholar?hl=zh-CN&as_sdt=0%2C5&q=Extended+finite+element-based+cohesive+zone+method+for+modeling+simultaneous+hydraulic+fracture+height+growth+in+layered+reservoirs&btnG=" target="_blank" style="display: inline-flex; align-items: center; gap: 6px; text-decoration: none; color: #2980b9; background-color: #f0f7fc; border: 1px solid #d0e3f0; padding: 3px 14px; border-radius: 25px; font-size: 0.8em; font-weight: 600; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-      <i class="ai ai-google-scholar"></i> Google Scholar
-    </a>
-
-  </div>
-</div>
-
-<div style="margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 10px;">
-  
-  <div style="font-size: 1.0em; font-weight: bold; color: #2c3e50; line-height: 1.4;">
-    Shack–Hartmann wavefront sensing: A new approach to time-resolved measurement of the stress intensity factor during dynamic fracture
-  </div>
-
-  <div style="margin-top: 5px; color: #333; font-size: 0.8em;">
-    Liuchi Li, Velat Kilic, Milad Alemohammad, <b>Lei Yang</b>, KT Ramesh, Mark A Foster, Todd C Hufnagel
-  </div>
-
-  <div style="font-style: italic; color: #666; margin-top: 2px; font-size: 0.8em;">
-    Mechanics of Materials, 2024
-  </div>
-
-  <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px; align-items: center;">
-    
-    <a href="https://doi.org/10.1016/j.mechmat.2024.105010" target="_blank" style="display: inline-flex; align-items: center; gap: 6px; text-decoration: none; color: #2980b9; background-color: #f0f7fc; border: 1px solid #d0e3f0; padding: 3px 14px; border-radius: 25px; font-size: 0.8em; font-weight: 600; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-      <i class="fas fa-link"></i> Journal URL
-    </a>
-
-    <a href="https://scholar.google.com/scholar?hl=zh-CN&as_sdt=0%2C5&q=Shack%E2%80%93Hartmann+wavefront+sensing%3A+A+new+approach+to+time-resolved+measurement+of+the+stress+intensity+factor+during+dynamic+fracture&btnG=" target="_blank" style="display: inline-flex; align-items: center; gap: 6px; text-decoration: none; color: #2980b9; background-color: #f0f7fc; border: 1px solid #d0e3f0; padding: 3px 14px; border-radius: 25px; font-size: 0.8em; font-weight: 600; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-      <i class="ai ai-google-scholar"></i> Google Scholar
-    </a>
-
-  </div>
-</div>
-
-<div style="margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 10px;">
-  
-  <div style="font-size: 1.0em; font-weight: bold; color: #2c3e50; line-height: 1.4;">
-    Experimental and numerical investigations of hybrid-fibre engineered cementitious composite panels under contact explosions
-  </div>
-
-  <div style="margin-top: 5px; color: #333; font-size: 0.8em;">
-    Joseph Chilvers, <b>Lei Yang</b>, Xiaoshan Lin, YX Zhang
-  </div>
-
-  <div style="font-style: italic; color: #666; margin-top: 2px; font-size: 0.8em;">
-    Engineering Structures, 2022
-  </div>
-
-  <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px; align-items: center;">
-    
-    <a href="https://doi.org/10.1016/j.engstruct.2022.114582" target="_blank" style="display: inline-flex; align-items: center; gap: 6px; text-decoration: none; color: #2980b9; background-color: #f0f7fc; border: 1px solid #d0e3f0; padding: 3px 14px; border-radius: 25px; font-size: 0.8em; font-weight: 600; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-      <i class="fas fa-link"></i> Journal URL
-    </a>
-
-    <a href="https://scholar.google.com/scholar?hl=zh-CN&as_sdt=0%2C5&q=Experimental+and+numerical+investigations+of+hybrid-fibre+engineered+cementitious+composite+panels+under+contact+explosions&btnG=" target="_blank" style="display: inline-flex; align-items: center; gap: 6px; text-decoration: none; color: #2980b9; background-color: #f0f7fc; border: 1px solid #d0e3f0; padding: 3px 14px; border-radius: 25px; font-size: 0.8em; font-weight: 600; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-      <i class="ai ai-google-scholar"></i> Google Scholar
-    </a>
-
-  </div>
-</div>
-
-<div style="margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 10px;">
-  
-  <div style="font-size: 1.0em; font-weight: bold; color: #2c3e50; line-height: 1.4;">
-    Simultaneous propagation of hydraulic fractures from multiple perforation clusters in layered tight reservoirs: Non-planar three-dimensional modelling
-  </div>
-
-  <div style="margin-top: 5px; color: #333; font-size: 0.8em;">
-    <b>Lei Yang</b>, Shan Wu, Ke Gao, Luming Shen
-  </div>
-
-  <div style="font-style: italic; color: #666; margin-top: 2px; font-size: 0.8em;">
-    Engineering Structures, 2022
-  </div>
-
-  <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px; align-items: center;">
-    
-    <a href="https://doi.org/10.1016/j.energy.2022.124483" target="_blank" style="display: inline-flex; align-items: center; gap: 6px; text-decoration: none; color: #2980b9; background-color: #f0f7fc; border: 1px solid #d0e3f0; padding: 3px 14px; border-radius: 25px; font-size: 0.8em; font-weight: 600; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-      <i class="fas fa-link"></i> Journal URL
-    </a>
-
-    <a href="https://scholar.google.com/scholar?hl=zh-CN&as_sdt=0%2C5&q=Simultaneous+propagation+of+hydraulic+fractures+from+multiple+perforation+clusters+in+layered+tight+reservoirs%3A+Non-planar+three-dimensional+modelling&btnG=" target="_blank" style="display: inline-flex; align-items: center; gap: 6px; text-decoration: none; color: #2980b9; background-color: #f0f7fc; border: 1px solid #d0e3f0; padding: 3px 14px; border-radius: 25px; font-size: 0.8em; font-weight: 600; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-      <i class="ai ai-google-scholar"></i> Google Scholar
-    </a>
-
-  </div>
-</div>
+.pub-link:hover {
+  background-color: #e0f0fc;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transform: translateY(-1px);
+}
+</style>

@@ -1,0 +1,33 @@
+{% comment %}
+  Renders a single publication item with clean styling
+  Usage: {% include publication-item.html pub=publication %}
+{% endcomment %}
+
+<div class="publication-item">
+  <div class="publication-title">
+    {{ include.pub.title }}
+  </div>
+  
+  <div class="publication-authors">
+    {{ include.pub.authors | replace: "Lei Yang", "<b>Lei Yang</b>" }}
+  </div>
+  
+  <div class="publication-journal">
+    {{ include.pub.journal }}, {{ include.pub.year }}
+  </div>
+  
+  <div class="publication-links">
+    {% if include.pub.journal_url %}
+    <a href="{{ include.pub.journal_url }}" target="_blank" class="pub-link">
+      <i class="fas fa-link"></i> Journal URL
+    </a>
+    {% endif %}
+    
+    {% if include.pub.scholar_url %}
+    <a href="{{ include.pub.scholar_url }}" target="_blank" class="pub-link">
+      <i class="ai ai-google-scholar"></i> Google Scholar
+    </a>
+    {% endif %}
+  </div>
+</div>
+
