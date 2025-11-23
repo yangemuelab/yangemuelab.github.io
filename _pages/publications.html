@@ -15,7 +15,7 @@ author_profile: true
   <i class="fas fa-book-open" style="color: #3498db; margin-right: 10px;"></i>Selected Journal Articles
 </h2>
 
-<div style="margin-bottom: 40px; border-bottom: 1px solid #eee; padding-bottom: 25px;">
+<div class="publication-item" style="margin-bottom: 40px; border-bottom: 1px solid #eee; padding-bottom: 25px;">
   
   <div style="font-size: 1.2em; font-weight: bold; color: #2c3e50; line-height: 1.4;">
     A mechanism‐based constitutive model for competent rocks subjected to impact loading
@@ -31,11 +31,11 @@ author_profile: true
 
   <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px; align-items: center;">
     
-    <button onclick="toggle_content('abs_1')" style="cursor: pointer; border: 1px solid #d0e3f0; background-color: #f0f7fc; color: #2980b9; padding: 6px 14px; border-radius: 25px; font-size: 0.85em; font-weight: 600; box-shadow: 0 2px 4px rgba(0,0,0,0.05); display: inline-flex; align-items: center; gap: 6px;">
+    <button class="toggle-btn" data-target="abs_1" type="button" style="cursor: pointer; border: 1px solid #d0e3f0; background-color: #f0f7fc; color: #2980b9; padding: 6px 14px; border-radius: 25px; font-size: 0.85em; font-weight: 600; box-shadow: 0 2px 4px rgba(0,0,0,0.05); display: inline-flex; align-items: center; gap: 6px;">
       <i class="fas fa-align-left"></i> Abstract
     </button>
 
-    <button onclick="toggle_content('bib_1')" style="cursor: pointer; border: 1px solid #d0e3f0; background-color: #f0f7fc; color: #2980b9; padding: 6px 14px; border-radius: 25px; font-size: 0.85em; font-weight: 600; box-shadow: 0 2px 4px rgba(0,0,0,0.05); display: inline-flex; align-items: center; gap: 6px;">
+    <button class="toggle-btn" data-target="bib_1" type="button" style="cursor: pointer; border: 1px solid #d0e3f0; background-color: #f0f7fc; color: #2980b9; padding: 6px 14px; border-radius: 25px; font-size: 0.85em; font-weight: 600; box-shadow: 0 2px 4px rgba(0,0,0,0.05); display: inline-flex; align-items: center; gap: 6px;">
       <i class="fas fa-quote-right"></i> BibTeX
     </button>
 
@@ -61,33 +61,40 @@ author_profile: true
   </div>
 
 </div>
-
 <script>
-console.log("Publication Script Loaded Successfully"); // This helps us debug
+document.addEventListener("DOMContentLoaded", function() {
+  console.log("Publication Script Loaded via Event Listener");
 
-function toggle_content(id) {
-  // 1. Find the hidden box
-  var element = document.getElementById(id);
-  
-  // Debugging check: Does the box exist?
-  if (!element) {
-    console.error("Error: Could not find an element with id: " + id);
-    alert("Error: The ID '" + id + "' was not found. Check your HTML!");
-    return;
-  }
+  // 1. Find all buttons with the class 'toggle-btn'
+  const buttons = document.querySelectorAll('.toggle-btn');
 
-  var all_content = document.querySelectorAll('.hidden-content');
-  
-  // 2. Toggle Logic
-  if (element.style.display === "block") {
-    element.style.display = "none";
-  } else {
-    // Close others first
-    all_content.forEach(function(content) {
-      content.style.display = "none";
+  buttons.forEach(button => {
+    button.addEventListener('click', function() {
+      // 2. Get the target ID from the data attribute
+      const targetId = this.getAttribute('data-target');
+      const targetElement = document.getElementById(targetId);
+
+      if (!targetElement) {
+        console.error("Target element not found: " + targetId);
+        return;
+      }
+
+      // 3. Logic to close other open boxes (Abstract vs BibTeX)
+      // Check if we are opening or closing
+      const isClosed = targetElement.style.display === "none" || targetElement.style.display === "";
+
+      if (isClosed) {
+        // Close ALL other hidden content first
+        document.querySelectorAll('.hidden-content').forEach(el => {
+           el.style.display = "none";
+        });
+        // Open the clicked one
+        targetElement.style.display = "block";
+      } else {
+        // Just close the clicked one
+        targetElement.style.display = "none";
+      }
     });
-    // Open this one
-    element.style.display = "block";
-  }
-}
+  });
+});
 </script>
