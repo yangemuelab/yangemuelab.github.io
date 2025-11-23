@@ -14,4 +14,25 @@
     await mermaid.run({querySelector:'code.language-mermaid'});
 </script>
 
+<script>
+function toggle_content(id) {
+  var element = document.getElementById(id);
+  var all_content = document.querySelectorAll('.hidden-content');
+  
+  // 1. If the clicked element is already open, just close it.
+  if (element.style.display === "block") {
+    element.style.display = "none";
+  } else {
+    // 2. Otherwise, close ALL other content blocks first.
+    // This ensures Abstract and BibTeX don't overlap or clutter the page.
+    all_content.forEach(function(content) {
+      content.style.display = "none";
+    });
+
+    // 3. Finally, open the requested one.
+    element.style.display = "block";
+  }
+}
+</script>
+
 <!-- end custom footer snippets -->
