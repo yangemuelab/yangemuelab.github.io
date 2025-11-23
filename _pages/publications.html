@@ -1,4 +1,21 @@
-<div style="margin-bottom: 40px; border-bottom: 1px solid #eee; padding-bottom: 25px;">
+---
+layout: archive
+title: "Publications"
+permalink: /publications/
+author_profile: true
+---
+
+{% if site.author.googlescholar %}
+  <div class="wordwrap">You can also find my full publication record on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
+{% endif %}
+
+{% include base_path %}
+
+<h2 style="margin-top: 30px; margin-bottom: 20px; color: #2c3e50; border-bottom: 2px solid #ecf0f1; padding-bottom: 10px;">
+  <i class="fas fa-book-open" style="color: #3498db; margin-right: 10px;"></i>Selected Journal Articles
+</h2>
+
+<div class="publication-item" style="margin-bottom: 40px; border-bottom: 1px solid #eee; padding-bottom: 25px;">
   
   <div style="font-size: 1.2em; font-weight: bold; color: #2c3e50; line-height: 1.4;">
     A mechanism‐based constitutive model for competent rocks subjected to impact loading
@@ -12,53 +29,40 @@
     Journal of Geophysical Research: Solid Earth, 2025
   </div>
 
-<div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px; align-items: center;">
+  <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px; align-items: flex-start;">
     
     <details name="pub1" style="display: inline-block; width: auto;">
-      <summary style="display: inline-flex; align-items: center; gap: 6px; cursor: pointer; outline: none; list-style: none; color: #2980b9; background-color: #f0f7fc; border: 1px solid #d0e3f0; padding: 6px 14px; border-radius: 25px; font-size: 0.85em; font-weight: 600; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+      <summary style="cursor: pointer; border: 1px solid #d0e3f0; background-color: #f0f7fc; color: #2980b9; padding: 6px 14px; border-radius: 25px; font-size: 0.85em; font-weight: 600; box-shadow: 0 2px 4px rgba(0,0,0,0.05); display: inline-flex; align-items: center; gap: 6px; list-style: none; outline: none;">
         <i class="fas fa-align-left"></i> Abstract
       </summary>
-      <div style="font-size: 0.95em; line-height: 1.6; background-color: #f8f9fa; border-left: 4px solid #2980b9; padding: 15px; margin-top: 10px; border-radius: 4px; color: #555; width: 100%; min-width: 300px;">
+      
+      <div style="font-size: 0.95em; line-height: 1.6; background-color: #f8f9fa; border-left: 4px solid #2980b9; padding: 15px; margin-top: 10px; margin-bottom: 10px; border-radius: 4px; color: #555; max-width: 600px;">
         <strong>Abstract:</strong> 
-        The dynamic behavior of rocks under dynamic loading conditions is important in a wide range of processes, including meteorite impact, planetary defense, earthquakes, and mining. 
-        Phenomenological constitutive models have been extensively developed to capture rock behavior but have difficulty describing response under such extreme conditions. 
-        In this study, we present a mechanism-based model to describe the behavior of rocks under high-velocity impact and related dynamic loading conditions. 
-        The model captures elasticity, the equation of state, micro-cracking induced fracture, crystal plasticity, granular flow, and porosity evolution of granular material within a thermodynamically consistent finite-deformation framework. 
-        We select sandstone as the model material and determine the material parameters based on independent experimental data. 
-        We then conduct high-velocity (~2km/s) impact tests on sandstone samples, and use the experimental data to validate the calibrated model. 
-        The results show that our model captures the competition and evolution of the failure mechanisms within sandstone during high velocity impact, 
-        and provides good agreement with experiments in terms of in situ impact processes and post-mortem crater dimensions. 
-        Our results also highlight the critical role of the cap component in the granular flow mechanism submodel for capturing the dynamic response of sandstone under high velocity impact, 
-        while demonstrating the relative insensitivity to the choice of non-associative and associative granular flow rules within this particular application. 
-        Our model can be applied to other competent rocks (e.g., granite and basalt) and other extreme conditions (e.g., shock and explosion) because of the similarity in deformation and failure mechanisms shared by these geomaterials.
+        The dynamic behavior of rocks under dynamic loading conditions is important in a wide range of processes, including meteorite impact, planetary defense, earthquakes, and mining.
       </div>
     </details>
 
     <details name="pub1" style="display: inline-block; width: auto;">
-      <summary style="display: inline-flex; align-items: center; gap: 6px; cursor: pointer; outline: none; list-style: none; color: #2980b9; background-color: #f0f7fc; border: 1px solid #d0e3f0; padding: 6px 14px; border-radius: 25px; font-size: 0.85em; font-weight: 600; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+      <summary style="cursor: pointer; border: 1px solid #d0e3f0; background-color: #f0f7fc; color: #2980b9; padding: 6px 14px; border-radius: 25px; font-size: 0.85em; font-weight: 600; box-shadow: 0 2px 4px rgba(0,0,0,0.05); display: inline-flex; align-items: center; gap: 6px; list-style: none; outline: none;">
         <i class="fas fa-quote-right"></i> BibTeX
       </summary>
-      <div style="margin-top: 10px;">
+      
+      <div style="margin-top: 10px; margin-bottom: 10px; max-width: 600px;">
         <pre style="font-size: 0.8em; background: #f4f4f4; padding: 15px; border-radius: 4px; overflow-x: auto; border: 1px solid #e0e0e0;">
 @article{yang2025JGR,
-  author = {Yang, Lei and Kuwik, Brett S. and Singh, Shachi and Ghosh, Sohanjit and Moreno, Justin and Hurley, Ryan and Ramesh, K. T.},
-  title = {A Mechanism-Based Constitutive Model for Competent Rocks Subjected to Impact Loading},
-  journal = {Journal of Geophysical Research: Solid Earth},
-  volume = {130},
-  number = {5},
-  pages = {e2024JB031101},
-  doi = {https://doi.org/10.1029/2024JB031101},
+  title = {A Mechanism-Based Constitutive Model...},
   year={2025}
 }</pre>
       </div>
     </details>
 
-<a href="https://doi.org/10.1029/2024JB031101" target="_blank" style="display: inline-flex; align-items: center; gap: 6px; text-decoration: none; color: #2980b9; background-color: #f0f7fc; border: 1px solid #d0e3f0; padding: 6px 14px; border-radius: 25px; font-size: 0.85em; font-weight: 600; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+    <a href="https://doi.org/10.1029/2024JB031101" target="_blank" style="text-decoration: none; border: 1px solid #d0e3f0; background-color: #f0f7fc; color: #2980b9; padding: 6px 14px; border-radius: 25px; font-size: 0.85em; font-weight: 600; box-shadow: 0 2px 4px rgba(0,0,0,0.05); display: inline-flex; align-items: center; gap: 6px;">
       <i class="fas fa-link"></i> Journal URL
     </a>
 
-    <a href="https://scholar.google.com/..." target="_blank" style="display: inline-flex; align-items: center; gap: 6px; text-decoration: none; color: #2980b9; background-color: #f0f7fc; border: 1px solid #d0e3f0; padding: 6px 14px; border-radius: 25px; font-size: 0.85em; font-weight: 600; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+    <a href="https://scholar.google.com/..." target="_blank" style="text-decoration: none; border: 1px solid #d0e3f0; background-color: #f0f7fc; color: #2980b9; padding: 6px 14px; border-radius: 25px; font-size: 0.85em; font-weight: 600; box-shadow: 0 2px 4px rgba(0,0,0,0.05); display: inline-flex; align-items: center; gap: 6px;">
       <i class="ai ai-google-scholar"></i> Scholar
     </a>
   </div>
+
 </div>
