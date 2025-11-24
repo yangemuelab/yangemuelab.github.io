@@ -1,18 +1,11 @@
 ---
 layout: archive
-title: "People"
+title: "Meet the Group"
 permalink: /people/
 author_profile: true
 ---
 
 {% include base_path %}
-
-<section class="people-hero">
-  <p>
-    We are a collaborative team working across solid mechanics, geotechnical engineering, computational modeling, and data-driven materials research. Below is our current roster, organized similarly to the
-    <a href="https://faculty.washington.edu/masiello/people/" target="_blank" rel="noopener">Masiello Research Group</a> layout that inspired this page.
-  </p>
-</section>
 
 <section class="people-section" id="pi">
   <h2>Principal Investigator</h2>
