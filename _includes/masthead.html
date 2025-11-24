@@ -1,8 +1,8 @@
 {% include base_path %}
 
-<div class="masthead">
+<div class="masthead masthead--accent">
   <div class="masthead__inner-wrap">
-    <div class="masthead__menu">
+    <div class="masthead__menu masthead__menu--boxed">
       <nav id="site-nav" class="greedy-nav">
         <button><span class="navicon"></span></button>
         <ul class="visible-links">
@@ -21,3 +21,27 @@
     </div>
   </div>
 </div>
+
+<style>
+.masthead--accent {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.masthead__menu--boxed .visible-links {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.masthead__menu-item--lg {
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-right: auto;
+}
+
+.masthead__menu--boxed a {
+  color: #f8fafc;
+}
+</style>
