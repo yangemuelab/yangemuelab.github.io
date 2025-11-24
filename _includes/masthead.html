@@ -1,113 +1,55 @@
 {% include base_path %}
 
-<header class="lab-header">
-  <div class="lab-header__inner">
-    <a class="lab-header__brand" href="{{ base_path }}/">{{ site.title }}</a>
-    <nav class="lab-header__nav">
-      {% for link in site.data.navigation.main %}
-        {% if link.url contains 'http' %}
-          {% assign href = link.url %}
-        {% else %}
-          {% assign href = base_path | append: link.url %}
-        {% endif %}
-        <a class="lab-header__link" href="{{ href }}">{{ link.title }}</a>
-      {% endfor %}
-    </nav>
+<div class="masthead masthead--accent">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu masthead__menu--boxed">
+      <nav id="site-nav" class="greedy-nav">
+        <button><span class="navicon"></span></button>
+        <ul class="visible-links">
+          <li class="masthead__menu-item masthead__menu-item--lg persist"><a href="{{ base_path }}/">{{ site.title }}</a></li>
+          {% for link in site.data.navigation.main %}
+            {% if link.url contains 'http' %}
+              {% assign domain = '' %}
+            {% else %}
+              {% assign domain = base_path %}
+            {% endif %}
+            <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
+          {% endfor %}
+        </ul>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
   </div>
-</header>
+</div>
 
 <style>
-.lab-header {
-  width: 100%;
+.masthead--accent {
   background: #ffffff;
   border-bottom: 1px solid #e5e7eb;
-  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
-  position: sticky;
-  top: 0;
-  z-index: 200;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.05);
 }
 
-.lab-header__inner {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 1.25rem 2rem;
-  width: 100%;
+.masthead__menu--boxed .visible-links {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
+  gap: 1.5rem;
+  width: 100%;
 }
 
-@media screen and (min-width: 1024px) {
-  .lab-header {
-    width: calc(100% - 260px);
-    margin-left: 260px;
-  }
-
-  .lab-header__inner {
-    padding-left: 1.5rem;
-    padding-right: 2rem;
-  }
-}
-
-.lab-header__brand {
-  font-size: 1.2rem;
+.masthead__menu-item--lg {
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #0f172a;
+  margin-right: auto;
+}
+
+.masthead__menu--boxed a {
+  color: #111827;
   text-decoration: none;
 }
 
-.lab-header__nav {
-  display: flex;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  margin-left: auto;
-}
-
-.lab-header__link {
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: #1f2937;
-  text-decoration: none;
-  position: relative;
-  padding-bottom: 4px;
-}
-
-.lab-header__link::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 2px;
-  background: #1d4ed8;
-  opacity: 0;
-  transform: translateY(2px);
-  transition: opacity 0.2s ease, transform 0.2s ease;
-}
-
-.lab-header__link:hover {
+.masthead__menu--boxed a:hover {
   color: #1d4ed8;
-}
-
-.lab-header__link:hover::after {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-@media (max-width: 768px) {
-  .lab-header__inner {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 1rem;
-  }
-
-  .lab-header__nav {
-    width: 100%;
-    gap: 1rem;
-  }
 }
 </style>
