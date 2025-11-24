@@ -7,7 +7,7 @@ author_profile: true
 
 {% if site.author.googlescholar %}
   <div class="publications-intro">
-    I listed my representative publications, conference papers, and book chapters here. Please find my full publication record on <a href="{{site.author.googlescholar}}" target="_blank">my Google Scholar profile</a>.
+    I list my representative publications, conference papers, and book chapters here. Please find my full publication record on <a href="{{site.author.googlescholar}}" target="_blank">Google Scholar</a>.
   </div>
 {% endif %}
 
@@ -47,6 +47,11 @@ author_profile: true
 </div>
 
 <style>
+/* Main page title alignment */
+.page__title {
+  text-align: left;
+}
+
 /* Intro */
 .publications-intro {
   margin-bottom: 1rem;
@@ -70,9 +75,9 @@ author_profile: true
   font-weight: 500;
   color: #4a5568;
   margin: 1.5rem 0 1.5rem 0;
-  padding: 0.75rem 1rem;
-  background-color: #f0f4f8;
-  border-radius: 4px;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #e0e0e0;
+  text-align: left;
 }
 
 /* Publication Item */
