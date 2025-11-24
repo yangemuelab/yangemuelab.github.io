@@ -18,7 +18,30 @@ author_profile: true
 </h2>
 
 <div class="publications-list">
-  {% for pub in site.data.publications %}
+  {% assign journal_pubs = site.data.publications | where: "type", "journal" %}
+  {% for pub in journal_pubs %}
+    {% include publication-item.html pub=pub %}
+  {% endfor %}
+</div>
+
+<h2 class="publications-title">
+  Conference Papers
+</h2>
+
+<div class="publications-list">
+  {% assign conference_pubs = site.data.publications | where: "type", "conference" %}
+  {% for pub in conference_pubs %}
+    {% include publication-item.html pub=pub %}
+  {% endfor %}
+</div>
+
+<h2 class="publications-title">
+  Book Chapters
+</h2>
+
+<div class="publications-list">
+  {% assign book_pubs = site.data.publications | where: "type", "book" %}
+  {% for pub in book_pubs %}
     {% include publication-item.html pub=pub %}
   {% endfor %}
 </div>

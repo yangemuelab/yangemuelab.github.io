@@ -6,7 +6,17 @@
 <div class="publication-item">
   <div class="pub-header">
     <span class="pub-year">{{ include.pub.year }}</span>
-    <span class="pub-journal">{{ include.pub.journal }}</span>
+    <span class="pub-journal">
+      {% if include.pub.type == "journal" %}
+        {{ include.pub.journal }}
+      {% elsif include.pub.type == "conference" %}
+        {{ include.pub.venue }}
+      {% elsif include.pub.type == "book" %}
+        {{ include.pub.book }}{% if include.pub.publisher %}, {{ include.pub.publisher }}{% endif %}
+      {% else %}
+        {{ include.pub.journal }}
+      {% endif %}
+    </span>
   </div>
   
   <h3 class="pub-title">

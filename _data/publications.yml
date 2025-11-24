@@ -1,18 +1,23 @@
 # Publications Data File
 # To add a new publication, copy the format below and add it to the list.
 # The "Lei Yang" name will automatically be bolded in the display.
-# All fields are optional except title, authors, journal, and year.
+# All fields are optional except title, authors, journal/venue/book, year, and type.
 #
 # Format:
 # - title: "Paper Title"
 #   authors: "Author 1, Author 2, Lei Yang, Author 3"
-#   journal: "Journal Name"
+#   type: "journal" (or "conference" or "book")
+#   journal: "Journal Name" (for journal articles)
+#   venue: "Conference Name" (for conference papers)
+#   book: "Book Name" (for book chapters)
+#   publisher: "Publisher Name" (for book chapters)
 #   year: 2025
 #   journal_url: "https://..." (optional)
 #   scholar_url: "https://..." (optional)
 
 - title: "A mechanism‐based constitutive model for competent rocks subjected to impact loading"
   authors: "Lei Yang, Brett S. Kuwik, Shachi Singh, Sohanjit Ghosh, Justin Moreno, Ryan Hurley, K. T. Ramesh"
+  type: "journal"
   journal: "Journal of Geophysical Research: Solid Earth"
   year: 2025
   journal_url: "https://doi.org/10.1029/2024JB031101"
@@ -20,6 +25,7 @@
 
 - title: "Extended finite element-based cohesive zone method for modeling simultaneous hydraulic fracture height growth in layered reservoirs"
   authors: "Lei Yang, Baixi Chen"
+  type: "journal"
   journal: "Journal of Rock Mechanics and Geotechnical Engineering"
   year: 2024
   journal_url: "https://www.sciencedirect.com/science/article/pii/S1674775524000842"
@@ -27,6 +33,7 @@
 
 - title: "Shack–Hartmann wavefront sensing: A new approach to time-resolved measurement of the stress intensity factor during dynamic fracture"
   authors: "Liuchi Li, Velat Kilic, Milad Alemohammad, Lei Yang, KT Ramesh, Mark A Foster, Todd C Hufnagel"
+  type: "journal"
   journal: "Mechanics of Materials"
   year: 2024
   journal_url: "https://doi.org/10.1016/j.mechmat.2024.105010"
@@ -34,6 +41,7 @@
 
 - title: "Experimental and numerical investigations of hybrid-fibre engineered cementitious composite panels under contact explosions"
   authors: "Joseph Chilvers, Lei Yang, Xiaoshan Lin, YX Zhang"
+  type: "journal"
   journal: "Engineering Structures"
   year: 2022
   journal_url: "https://doi.org/10.1016/j.engstruct.2022.114582"
@@ -41,6 +49,7 @@
 
 - title: "Simultaneous propagation of hydraulic fractures from multiple perforation clusters in layered tight reservoirs: Non-planar three-dimensional modelling"
   authors: "Lei Yang, Shan Wu, Ke Gao, Luming Shen"
+  type: "journal"
   journal: "Energy"
   year: 2022
   journal_url: "https://doi.org/10.1016/j.energy.2022.124483"
@@ -48,6 +57,7 @@
 
 - title: "On the fracture mechanism of rock-like materials with interbedded hard-soft layers under Brazilian tests"
   authors: "Lei Yang, Mansour Sharafisafa, Luming Shen"
+  type: "journal"
   journal: "Theoretical and Applied Fracture Mechanics"
   year: 2021
   journal_url: "https://doi.org/10.1016/j.tafmec.2021.103102"
@@ -55,6 +65,7 @@
 
 - title: "A combined experimental and numerical study on the triaxial and dynamic compression behavior of cemented tailings backfill"
   authors: "Lei Yang, Wenbin Xu, Erol Yilmaz, Qiang Wang, Jingping Qiu"
+  type: "journal"
   journal: "Engineering Structures"
   year: 2020
   journal_url: "https://doi.org/10.1016/j.engstruct.2020.110957"
@@ -62,6 +73,7 @@
 
 - title: "A rate-and pressure-dependent damage-plasticity constitutive model for rock"
   authors: "Lei Yang, Guosheng Wang, Gao-Feng Zhao, Luming Shen"
+  type: "journal"
   journal: "International Journal of Rock Mechanics and Mining Sciences"
   year: 2020
   journal_url: "https://doi.org/10.1016/j.ijrmms.2020.104394"
@@ -69,6 +81,7 @@
 
 - title: "A new constitutive model for steel fibre reinforced concrete subjected to dynamic loads"
   authors: "Lei Yang, Xiaoshan Lin, Huiyun Li, Rebecca J. Gravina"
+  type: "journal"
   journal: "Composite Structures"
   year: 2019
   journal_url: "https://doi.org/10.1016/j.compstruct.2019.04.021"
@@ -76,6 +89,7 @@
 
 - title: "Prediction of dynamic increase factor for steel fibre reinforced concrete using a hybrid artificial intelligence model"
   authors: "Lei Yang, Chongchong Qi, Xiaoshan Lin, Junwei Li, Xiangjian Dong"
+  type: "journal"
   journal: "Engineering Structures"
   year: 2019
   journal_url: "https://doi.org/10.1016/j.engstruct.2019.03.105"
@@ -83,7 +97,23 @@
 
 - title: "Evaluation of dynamic increase factor models for steel fibre reinforced concrete"
   authors: "Lei Yang, Xiaoshan Lin, Rebecca J. Gravina"
+  type: "journal"
   journal: "Construction and Building Materials"
   year: 2018
   journal_url: "https://doi.org/10.1016/j.conbuildmat.2018.09.085"
   scholar_url: "https://scholar.google.com/scholar?hl=zh-CN&as_sdt=0%2C5&q=Evaluation+of+dynamic+increase+factor+models+for+steel+fibre+reinforced+concrete&btnG="
+
+- title: "Numerical investigation on the fracture mechanism of rock-like Brazilian discs with interbedded hard-soft layers"
+  authors: "Lei Yang, Mansour Sharafisafa, Luming Shen"
+  type: "conference"
+  venue: "ACAM10: 10th Australasian Congress on Applied Mechanics"
+  year: 2021
+  journal_url: "https://search.informit.org/doi/abs/10.3316/informit.321934809835497#"
+  scholar_url: "https://scholar.google.com/scholar?hl=zh-CN&as_sdt=0%2C5&q=Numerical+investigation+on+the+fracture+mechanism+of+rock-like+Brazilian+discs+with+interbedded+hard-soft+layers&btnG="
+
+- title: "A constitutive model for numerical modeling of steel fiber-reinforced concrete"
+  authors: "Lei Yang, Xiaoshan Lin"
+  type: "book"
+  book: "Advances in Engineered Cementitious Composite: Materials, Structures, and Numerical Modeling"
+  publisher: "Woodhead Publishing"
+  year: 2022
