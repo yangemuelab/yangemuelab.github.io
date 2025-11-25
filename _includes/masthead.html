@@ -149,25 +149,20 @@ $(document).ready(function() {
   
   // Wait for greedy-nav to initialize
   setTimeout(function() {
-    // Close menu when clicking anywhere on the document
-    $(document).on('click', function(event) {
+    // Use event delegation on body to catch all clicks
+    $('body').on('click', function(event) {
       // Check if menu is open
       var isMenuOpen = $btn.hasClass('close');
       
       if (isMenuOpen) {
-        var $target = $(event.target);
+        var clickedElement = event.target;
+        var $clicked = $(clickedElement);
         
-        // Check if click is on the button (let greedy-nav handle toggle)
-        var isButton = $target.closest('#site-nav button').length > 0;
+        // Check if click is inside the navigation (button or dropdown)
+        var clickedInNav = $clicked.closest('#site-nav').length > 0;
         
-        // Check if click is inside hidden links dropdown
-        var isInDropdown = $target.closest('.hidden-links').length > 0;
-        
-        // Check if click is inside the button's span (navicon)
-        var isInButtonIcon = $target.closest('button span').length > 0;
-        
-        // Close if clicking outside button and dropdown
-        if (!isButton && !isInDropdown && !isInButtonIcon) {
+        // Only close if clicking completely outside navigation
+        if (!clickedInNav) {
           $hlinks.addClass('hidden');
           $btn.removeClass('close');
         }
