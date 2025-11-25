@@ -56,11 +56,18 @@
   background-color: #0f172a !important;
 }
 
-/* Keep hamburger icon as three lines even when menu is open */
-.greedy-nav button.close .navicon {
-  background-color: #0f172a !important;
+.greedy-nav button .navicon::before {
+  top: -8px !important;
+  bottom: auto !important;
 }
 
+.greedy-nav button .navicon::after {
+  top: 8px !important;
+  bottom: auto !important;
+}
+
+/* Keep hamburger icon as three lines even when menu is open */
+.greedy-nav button.close .navicon,
 .greedy-nav button.close .navicon::before,
 .greedy-nav button.close .navicon::after {
   background-color: #0f172a !important;
@@ -69,11 +76,13 @@
 }
 
 .greedy-nav button.close .navicon::before {
-  top: -8px !important; /* 2 * 4px navicon height */
+  top: -8px !important;
+  bottom: auto !important;
 }
 
 .greedy-nav button.close .navicon::after {
-  bottom: -8px !important;
+  top: 8px !important;
+  bottom: auto !important;
 }
 
 .masthead__menu--boxed .visible-links {
