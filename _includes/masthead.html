@@ -59,6 +59,12 @@
   background-color: #0f172a !important;
 }
 
+/* Ensure X (close state) also uses dark color */
+.greedy-nav button.close .navicon::before,
+.greedy-nav button.close .navicon::after {
+  background-color: #0f172a !important;
+}
+
 .masthead__menu--boxed .visible-links {
   display: flex;
   align-items: center;
@@ -97,11 +103,17 @@
   font-weight: 400;
   letter-spacing: 0.08em;
   font-size: 1.2rem;
+  text-transform: uppercase;
 }
 
 /* Navigation links hover - match lab brand hover (blue) */
 .masthead__menu--boxed a:hover {
   color: #1d4ed8; /* Blue color on hover, matching lab brand */
+}
+
+/* Hidden menu links - uppercase to match visible links */
+.greedy-nav .hidden-links a {
+  text-transform: uppercase;
 }
 
 /* Hidden menu links hover - match lab brand hover (blue) */
