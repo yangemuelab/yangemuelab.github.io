@@ -23,7 +23,7 @@ repository               : "yangemuelab/yangemuelab.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.jpg"
+  avatar           : "profprofile.jpg"
   name             : "Prof. Lei Yang"
   pronouns         : "he/him" # example: "she/her"  
   bio              : "Full Professor of Civil Engineering "
