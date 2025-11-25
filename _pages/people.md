@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "MEET THE GROUP"
+title: "People"
 permalink: /people/
 author_profile: false
 ---
@@ -84,6 +84,10 @@ author_profile: false
 
 .people-section:first-of-type {
   margin-top: 0; /* No extra spacing - matches default page title to paragraph spacing */
+}
+
+.people-section:first-of-type h2 {
+  margin-top: 0; /* Remove h2's default margin-top for first section */
 }
 
 .people-section h2 {
