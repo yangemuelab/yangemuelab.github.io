@@ -145,40 +145,26 @@
 
 <script>
   $(document).ready(function() {
-    // Attach click listener to the entire document (not just body)
-    $(document).on('click', function(event) {
-      
-      // 1. Re-select elements freshly on every single click
-      // This ensures we aren't targeting "ghost" elements that were deleted by the theme
+    $(document).on('click touchstart', function(event) {
       var $nav = $('#site-nav');
       var $btn = $nav.find('button'); 
       var $links = $nav.find('.hidden-links');
-  
-      // 2. Check if the menu is currently marked as OPEN
+
       var isMenuOpen = $btn.hasClass('close');
-  
-      // 3. Check if the click target was OUTSIDE the navigation container
-      var $target = $(event.target);
-      var isClickInside = $target.closest('#site-nav').length > 0;
-  
-      // DEBUGGING: This will show in your browser console (F12)
-      if (isMenuOpen) {
-          console.log("Menu is OPEN. Clicked inside nav?", isClickInside);
+      if (!isMenuOpen) {
+        return;
       }
-  
-      // 4. THE ACTION: If open AND clicked outside, Force Close.
-      if (isMenuOpen && !isClickInside) {
-        console.log("Closing menu...");
-        
-        // Force remove the 'close' class from button
+
+      var $target = $(event.target);
+      var clickedButton = $target.closest('#site-nav button').length > 0;
+      var clickedHiddenLinks = $target.closest('#site-nav .hidden-links').length > 0;
+
+      if (!clickedButton && !clickedHiddenLinks) {
         $btn.removeClass('close');
-        
-        // Force add the 'hidden' class to the links
         $links.addClass('hidden');
       }
     });
-    
-    // Optional: Keep your logic to close the menu when a link is actually clicked
+
     $(document).on('click', '#site-nav .hidden-links a', function() {
       $('#site-nav button').removeClass('close');
       $('#site-nav .hidden-links').addClass('hidden');
