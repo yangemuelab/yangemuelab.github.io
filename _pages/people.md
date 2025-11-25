@@ -69,7 +69,7 @@ author_profile: false
 }
 
 .people-hero {
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.0rem;
   font-size: 1rem;
   color: #444;
 }
@@ -91,7 +91,7 @@ author_profile: false
 }
 
 .people-section h2 {
-  font-size: 1.4rem;
+  font-size: 1.25rem;
   color: #2c3e50;
   border-bottom: 1px solid #e0e0e0;
   padding-bottom: 0.4rem;
@@ -136,7 +136,7 @@ author_profile: false
 }
 
 .pi-card h3 {
-  font-size: 1.15rem;
+  font-size: 1.0rem;
   color: #16213e;
   margin-bottom: 0;
 }
@@ -157,7 +157,7 @@ author_profile: false
 
 .person-card h3 {
   margin: 0;
-  font-size: 1.1rem;
+  font-size: 1.0rem;
   color: #16213e;
 }
 
