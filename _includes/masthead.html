@@ -144,41 +144,45 @@
 </style>
 
 <script>
-// Close mobile menu when clicking outside or on a menu item
-$(document).ready(function() {
-  var $btn = $('#site-nav button');
-  var $hlinks = $('#site-nav .hidden-links');
-  var $nav = $('#site-nav');
+  $(document).ready(function() {
+    // We attach the listener to the document immediately.
+    // Because we select the elements INSIDE the function, 
+    // we don't need the 500ms timeout anymore.
+    
+    $(document).on('click', function(event) {
+      // 1. Select elements dynamically RIGHT NOW (to avoid stale references)
+      var $navContainer = $('#site-nav');
+      var $btn = $navContainer.find('button');
+      var $hlinks = $navContainer.find('.hidden-links');
   
-  // Wait for greedy-nav to initialize
-  setTimeout(function() {
-    // Use event delegation on body to catch all clicks
-    $('body').on('click', function(event) {
-      // Check if menu is open
+      // 2. Check if menu is currently open
+      // (In greedy-nav, the button usually gets the class 'close' when the menu is OPEN)
       var isMenuOpen = $btn.hasClass('close');
-      
+  
       if (isMenuOpen) {
-        var clickedElement = event.target;
-        var $clicked = $(clickedElement);
-        
-        // Check if click is inside the navigation (button or dropdown)
-        var clickedInNav = $clicked.closest('#site-nav').length > 0;
-        
-        // Only close if clicking completely outside navigation
-        if (!clickedInNav) {
+        // 3. check if the click target is inside the #site-nav container
+        var $target = $(event.target);
+        var clickedInside = $target.closest('#site-nav').length > 0;
+  
+        // 4. If clicked OUTSIDE the nav container, close the menu
+        if (!clickedInside) {
           $hlinks.addClass('hidden');
           $btn.removeClass('close');
         }
       }
     });
-    
-    // Close menu when clicking on a menu link
-    $hlinks.on('click', 'a', function() {
+  
+    // Keep your link clicking logic, but apply it dynamically as well
+    // Using 'body' delegation ensures it works even if links are recreated
+    $('body').on('click', '#site-nav .hidden-links a', function() {
+      var $navContainer = $('#site-nav');
+      var $btn = $navContainer.find('button');
+      var $hlinks = $navContainer.find('.hidden-links');
+      
       setTimeout(function() {
         $hlinks.addClass('hidden');
         $btn.removeClass('close');
       }, 100);
     });
-  }, 500);
-});
-</script>
+  });
+  </script>
