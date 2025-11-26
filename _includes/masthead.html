@@ -26,7 +26,6 @@
 .masthead--accent,
 .masthead.masthead--accent {
   background: #54278f !important;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
 }
 
 .masthead__inner-wrap {
@@ -34,11 +33,11 @@
 }
 
 .masthead__menu {
-  background: #54278f !important;
+  background: transparent !important;
 }
 
 .greedy-nav {
-  background: #54278f !important;
+  background: transparent !important;
 }
 
 .greedy-nav button {
@@ -86,11 +85,11 @@
   align-items: center;
   gap: 1.5rem;
   width: 100%;
-  background: #54278f !important;
+  background: transparent !important;
 }
 
 .visible-links {
-  background: #54278f !important;
+  background: transparent !important;
 }
 
 .masthead__menu-item {
@@ -114,7 +113,7 @@
 }
 
 .masthead__menu--boxed a {
-  color: rgba(255, 255, 255, 0.92);
+  color: #111827;
   text-decoration: none;
   font-weight: 400;
   letter-spacing: 0.08em;
@@ -122,9 +121,8 @@
   text-transform: uppercase;
 }
 
-/* Navigation links hover - match lab brand hover (blue) */
 .masthead__menu--boxed a:hover {
-  color: #d6c6ff;
+  color: #54278f; /* Blue color on hover, matching original lab brand hover */
 }
 
 /* Hidden menu links - uppercase to match visible links */
@@ -132,14 +130,8 @@
   text-transform: uppercase;
 }
 
-/* Ensure hidden menu background matches masthead color */
-.greedy-nav .hidden-links {
-  background: #54278f !important;
-}
-
-/* Hidden menu links hover - match lab brand hover (blue) */
 .greedy-nav .hidden-links a:hover {
-  color: #1d4ed8 !important; /* Blue color on hover, matching lab brand */
+  color: #54278f !important; /* Blue color on hover, matching original lab brand hover */
   background: transparent;
 }
 </style>
