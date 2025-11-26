@@ -49,18 +49,18 @@ author_profile: false
 }
 
 .opportunities-highlight {
-  background-color: #fff3cd;
-  border-left: 4px solid #ffc107;
+  background-color: #e8f4f8;
+  border-left: 4px solid #3498db;
   padding: 1rem 1.25rem;
   margin: 1.5rem 0;
   border-radius: 4px;
-  color: #856404;
+  color: #2c3e50;
   font-size: 1rem;
   line-height: 1.6;
 }
 
 .opportunities-highlight strong {
-  color: #664d03;
+  color: #1a202c;
   font-weight: 600;
 }
 
@@ -209,21 +209,21 @@ author_profile: false
   </div>
 </div>
 
+<div class="opportunities-section">
+  <h2 class="opportunities-section-title">Career Paths</h2>
+  <div class="opportunities-content">
+    <p>
+      Academia is not the only goal in our group; we are also very welcoming to students who want to pursue a career in industry. We support diverse career aspirations and help our members develop skills that are valuable in both academic and industrial settings.
+    </p>
+  </div>
+</div>
+
 <div class="opportunities-image-container">
   <img src="/images/join_us_nolabname.png" alt="Join us">
   <div class="opportunities-image-caption">
     <h3 class="opportunities-image-caption-title">Interested in Joining Us?</h3>
     <p class="opportunities-image-caption-text">
       If you are interested in joining us, please feel free to reach out together with your <strong>CV</strong> and brief <strong>research statement</strong>.
-    </p>
-  </div>
-</div>
-
-<div class="opportunities-section">
-  <h2 class="opportunities-section-title">Career Paths</h2>
-  <div class="opportunities-content">
-    <p>
-      Academia is not the only goal in our group; we are also very welcoming to students who want to pursue a career in industry. We support diverse career aspirations and help our members develop skills that are valuable in both academic and industrial settings.
     </p>
   </div>
 </div>
