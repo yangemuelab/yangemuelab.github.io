@@ -82,8 +82,8 @@ author_profile: false
 
 .people-section h2 {
   font-size: 1.25rem;
-  color: #2c3e50;
-  border-bottom: 1px solid #e0e0e0;
+  color: #1F3A5F;
+  border-bottom: 2px solid #d5dbee;
   padding-bottom: 0.4rem;
   margin-bottom: 1.2rem;
 }
@@ -127,7 +127,7 @@ author_profile: false
 
 .pi-card h3 {
   font-size: 1.0rem;
-  color: #16213e;
+  color: #1F3A5F;
   margin-bottom: 0;
 }
 
@@ -148,12 +148,12 @@ author_profile: false
 .person-card h3 {
   margin: 0;
   font-size: 1.0rem;
-  color: #16213e;
+  color: #1F3A5F;
 }
 
 .person-role {
   font-weight: 500;
-  color: #415a77;
+  color: #29466c;
   margin-top: 0.4rem;
   margin-bottom: 0.6rem;
 }
@@ -167,7 +167,8 @@ author_profile: false
 
 .person-card.placeholder {
   text-align: center;
-  background: linear-gradient(135deg, #f9fbff, #f1f5ff);
+  background: linear-gradient(135deg, #f8faff, #eef2fb);
   border-style: dashed;
+  border-color: #bfcde9;
 }
 </style>
