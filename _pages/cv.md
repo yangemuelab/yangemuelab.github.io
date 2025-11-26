@@ -28,22 +28,43 @@ redirect_from:
   color: #2c3e50;
   margin: 0 0 1.5rem 0;
   font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
 }
 
 .cv-section-icon {
-  margin-right: 0.625rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.cv-section-title:hover .cv-section-icon {
+  transform: scale(1.1);
 }
 
 .cv-section-icon--education {
   color: #3498db;
+  background-color: #e8f4f8;
+  border: 2px solid #3498db;
 }
 
 .cv-section-icon--work {
   color: #e67e22;
+  background-color: #fef3e7;
+  border: 2px solid #e67e22;
 }
 
 .cv-section-icon--research {
   color: #27ae60;
+  background-color: #e8f8f0;
+  border: 2px solid #27ae60;
 }
 
 .cv-section-content {
@@ -187,7 +208,7 @@ redirect_from:
 </div>
 
 <h2 class="cv-section-title">
-  <i class="fas fa-microscope cv-section-icon cv-section-icon--research"></i>Research Interests
+  <i class="fas fa-flask cv-section-icon cv-section-icon--research"></i>Research Interests
 </h2>
 
 <div class="cv-interests-container">
