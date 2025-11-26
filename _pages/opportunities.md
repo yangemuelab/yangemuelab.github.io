@@ -75,39 +75,38 @@ author_profile: false
 
 .opportunities-image-container img {
   display: block;
-  margin: 0 auto;
+  margin: 0 auto 1.5rem auto;
   max-width: 85%;
   height: auto;
   border-radius: 4px;
 }
 
-.opportunities-cta {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: #fff;
-  padding: 2rem;
-  border-radius: 8px;
-  margin-top: 2.5rem;
+.opportunities-image-caption {
+  background-color: #f8f9fa;
+  border-top: 2px solid #e5e7eb;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  border-radius: 0 0 4px 4px;
   text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.opportunities-cta-title {
-  font-size: 1.5rem;
+.opportunities-image-caption-title {
+  font-size: 1.25rem;
   font-weight: 600;
-  margin: 0 0 1rem 0;
-  color: #fff;
+  margin: 0 0 0.75rem 0;
+  color: #2c3e50;
 }
 
-.opportunities-cta-text {
-  font-size: 1.125rem;
+.opportunities-image-caption-text {
+  font-size: 1.0625rem;
   line-height: 1.6;
   margin: 0;
-  color: rgba(255, 255, 255, 0.95);
+  color: #4b5563;
 }
 
-.opportunities-cta-text strong {
+.opportunities-image-caption-text strong {
   font-weight: 600;
-  color: #fff;
+  color: #2c3e50;
 }
 
 .opportunities-list {
@@ -171,20 +170,20 @@ author_profile: false
     font-size: 1rem;
   }
   
-  .opportunities-cta {
-    padding: 1.5rem;
-  }
-  
-  .opportunities-cta-title {
-    font-size: 1.25rem;
-  }
-  
-  .opportunities-cta-text {
-    font-size: 1rem;
-  }
-  
   .opportunities-image-container {
     padding: 1rem;
+  }
+  
+  .opportunities-image-caption {
+    padding: 1.25rem;
+  }
+  
+  .opportunities-image-caption-title {
+    font-size: 1.125rem;
+  }
+  
+  .opportunities-image-caption-text {
+    font-size: 1rem;
   }
 }
 </style>
@@ -212,6 +211,12 @@ author_profile: false
 
 <div class="opportunities-image-container">
   <img src="/images/join_us_nolabname.png" alt="Join us">
+  <div class="opportunities-image-caption">
+    <h3 class="opportunities-image-caption-title">Interested in Joining Us?</h3>
+    <p class="opportunities-image-caption-text">
+      If you are interested in joining us, please feel free to reach out together with your <strong>CV</strong> and brief <strong>research statement</strong>.
+    </p>
+  </div>
 </div>
 
 <div class="opportunities-section">
@@ -221,11 +226,4 @@ author_profile: false
       Academia is not the only goal in our group; we are also very welcoming to students who want to pursue a career in industry. We support diverse career aspirations and help our members develop skills that are valuable in both academic and industrial settings.
     </p>
   </div>
-</div>
-
-<div class="opportunities-cta">
-  <h3 class="opportunities-cta-title">Interested in Joining Us?</h3>
-  <p class="opportunities-cta-text">
-    If you are interested in joining us, please feel free to reach out together with your <strong>CV</strong> and brief <strong>research statement</strong>.
-  </p>
 </div>
