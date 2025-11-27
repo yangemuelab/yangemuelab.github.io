@@ -20,10 +20,19 @@ author_profile: false
 <section class="people-section" id="scientists">
   <h2>Research Scientists</h2>
   <div class="people-grid">
-    <article class="person-card placeholder">
-      <h3>We are recruiting</h3>
+    <article class="person-card">
+      <img src="{{ '/images/bio-photo.jpg' | relative_url }}" alt="Portrait" class="person-photo" loading="lazy">
+      <h3>Name 1</h3>
       <p class="person-role">Research Scientist</p>
-      <p>with expertise in high-rate material characterization and computational mechanics</p>
+      <p class="person-focus">Research focus area</p>
+      <p class="person-email"><a href="mailto:email1@example.com">email1@example.com</a></p>
+    </article>
+    <article class="person-card">
+      <img src="{{ '/images/bio-photo-2.jpg' | relative_url }}" alt="Portrait" class="person-photo" loading="lazy">
+      <h3>Name 2</h3>
+      <p class="person-role">Research Scientist</p>
+      <p class="person-focus">Research focus area</p>
+      <p class="person-email"><a href="mailto:email2@example.com">email2@example.com</a></p>
     </article>
   </div>
 </section>
@@ -31,10 +40,19 @@ author_profile: false
 <section class="people-section" id="postdocs">
   <h2>Postdoctoral Fellows</h2>
   <div class="people-grid">
-    <article class="person-card placeholder">
-      <h3>Open Position</h3>
+    <article class="person-card">
+      <img src="{{ '/images/bio-photo.jpg' | relative_url }}" alt="Portrait" class="person-photo" loading="lazy">
+      <h3>Name 1</h3>
       <p class="person-role">Postdoctoral Fellow</p>
-      <p>in dynamic fracture, high-fidelity simulations, AI for materials design.</p>
+      <p class="person-focus">Research focus area</p>
+      <p class="person-email"><a href="mailto:email1@example.com">email1@example.com</a></p>
+    </article>
+    <article class="person-card">
+      <img src="{{ '/images/bio-photo-2.jpg' | relative_url }}" alt="Portrait" class="person-photo" loading="lazy">
+      <h3>Name 2</h3>
+      <p class="person-role">Postdoctoral Fellow</p>
+      <p class="person-focus">Research focus area</p>
+      <p class="person-email"><a href="mailto:email2@example.com">email2@example.com</a></p>
     </article>
   </div>
 </section>
@@ -149,6 +167,17 @@ author_profile: false
   padding: 1.25rem;
   background-color: #fff;
   box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
+  text-align: center;
+}
+
+.person-photo {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 auto 1rem auto;
+  display: block;
+  box-shadow: 0 4px 8px rgba(15, 23, 42, 0.12);
 }
 
 .person-card h3 {
@@ -169,6 +198,23 @@ author_profile: false
   font-size: 0.95rem;
   color: #4a4a4a;
   margin-bottom: 0.5rem;
+}
+
+.person-email {
+  margin-top: 0.75rem;
+  margin-bottom: 0;
+  font-size: 0.9rem;
+}
+
+.person-email a {
+  color: #1F3A5F;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.person-email a:hover {
+  color: #54278f;
+  text-decoration: underline;
 }
 
 .person-card.placeholder {
