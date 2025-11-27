@@ -23,65 +23,133 @@
 
 <style>
   :root {
-    /* Keeping Your Current Colors */
-    --hbg: #54278f;  /* Deep Purple */
-    --htxt: #fff;     /* White */
-    --ntxt: #111827; /* Very Dark Blue/Gray (for dropdown/mobile) */
-    --nhov: #00BFA5; /* Bright Teal/Cyan Hover */
-    --fnt-title: 'Lato', sans-serif; /* Example font change */
-    --fnt-nav: 'Roboto', sans-serif; /* Example font change */
+    --hbg: #54278f;
+    --htxt: #fff;
+    --ntxt: #111827;
+    --nhov: #00BFA5;
   }
   
-  /* 1. Simplify Title (More Professional) */
+  .masthead--accent {
+    background: var(--hbg) !important;
+  }
+  
+  .masthead__inner-wrap,
+  .masthead__menu,
+  .greedy-nav,
+  .greedy-nav button,
+  .masthead__menu--boxed .visible-links,
+  .visible-links,
+  .masthead__menu-item {
+    background: transparent !important;
+  }
+  
+  .greedy-nav {
+    display: flex;
+    align-items: center;
+    min-height: 2.5rem;
+  }
+  
+  .greedy-nav button {
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    right: 0 !important;
+    height: 2.5rem !important;
+  }
+  
+  .greedy-nav button .navicon,
+  .greedy-nav button .navicon::before,
+  .greedy-nav button .navicon::after,
+  .greedy-nav button.close .navicon,
+  .greedy-nav button.close .navicon::before,
+  .greedy-nav button.close .navicon::after {
+    background-color: var(--htxt) !important;
+    transform: none !important;
+  }
+  
+  .greedy-nav button .navicon::before,
+  .greedy-nav button.close .navicon::before {
+    top: -8px !important;
+  }
+  
+  .greedy-nav button .navicon::after,
+  .greedy-nav button.close .navicon::after {
+    top: 8px !important;
+  }
+  
+  .masthead__menu--boxed .visible-links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+  }
+  
   .masthead__menu-item--lg {
-    font-family: var(--fnt-title);
-    font-weight: 800; /* Extra bold */
-    letter-spacing: 0.01em; /* Tighter spacing */
-    text-transform: none; /* Title case is often cleaner than uppercase */
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
     color: var(--htxt);
-    margin-right: 2rem; /* Add more space before the main links */
+    margin-right: auto;
   }
   
-  .masthead__menu-item--lg a {
-      font-size: 1.5rem !important; /* Make the title slightly larger */
+  .masthead__menu-item--lg a,
+  .masthead__menu-item--lg a:link,
+  .masthead__menu-item--lg a:visited,
+  .masthead__menu-item--lg a:active,
+  .masthead__menu-item--lg a:focus {
+    font-size: 1.4rem;
+    color: #fff !important;
+    text-decoration: none;
   }
   
-  /* 2. Refined Navigation Links */
+  .masthead__menu-item--lg a:hover {
+    font-size: 1.4rem;
+    color: #fff !important;
+    text-decoration: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    background: transparent !important;
+  }
+  
   .masthead__menu--boxed a,
   .greedy-nav .hidden-links a {
-    font-family: var(--fnt-nav);
-    color: var(--htxt); /* Ensure links are white in the purple bar */
+    color: var(--ntxt);
     text-decoration: none;
-    font-weight: 500; /* Mid-weight */
-    letter-spacing: 0.05em; /* Reduced spacing */
-    font-size: 1.15rem; /* Slightly smaller, more refined links */
-    text-transform: none; /* Clean, title-case links */
-    border-bottom: 2px solid transparent; /* Prepare for underliner hover */
-    padding-bottom: 0.25rem; /* Lift text slightly for the border */
-    transition: all 0.2s ease-in-out;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    font-size: 1.2rem;
+    text-transform: uppercase;
   }
   
-  /* 3. Modern Hover Effect (Underline) */
-  .masthead__menu--boxed a:hover {
-    color: var(--nhov) !important;
-    border-bottom-color: var(--nhov) !important; /* Use hover color as an underline */
-  }
-  
-  /* 4. Mobile/Dropdown Styling */
-  .greedy-nav .hidden-links {
-    /* Assume light background for dropdown content, so use dark text */
-    background-color: #f7f7f7 !important; 
-  }
-  
-  .greedy-nav .hidden-links a {
-    color: var(--ntxt) !important; /* Dark text on light dropdown background */
-    font-size: 1.3rem;
-    border-bottom: none;
-  }
-  
+  .masthead__menu--boxed a:hover,
   .greedy-nav .hidden-links a:hover {
     color: var(--nhov) !important;
-    background-color: #ededed !important; /* Subtle background change on hover */
+  }
+  
+  /* Force brand name to stay white in all states */
+  .masthead__menu-item--lg.persist a,
+  .masthead__menu-item--lg.persist a:link,
+  .masthead__menu-item--lg.persist a:visited,
+  .masthead__menu-item--lg.persist a:hover,
+  .masthead__menu-item--lg.persist a:active,
+  .masthead__menu-item--lg.persist a:focus,
+  .masthead__menu--boxed .masthead__menu-item--lg.persist a,
+  .masthead__menu--boxed .masthead__menu-item--lg.persist a:link,
+  .masthead__menu--boxed .masthead__menu-item--lg.persist a:visited,
+  .masthead__menu--boxed .masthead__menu-item--lg.persist a:hover,
+  .masthead__menu--boxed .masthead__menu-item--lg.persist a:active,
+  .masthead__menu--boxed .masthead__menu-item--lg.persist a:focus,
+  .greedy-nav .masthead__menu-item--lg.persist a,
+  .greedy-nav .masthead__menu-item--lg.persist a:link,
+  .greedy-nav .masthead__menu-item--lg.persist a:visited,
+  .greedy-nav .masthead__menu-item--lg.persist a:hover,
+  .greedy-nav .masthead__menu-item--lg.persist a:active,
+  .greedy-nav .masthead__menu-item--lg.persist a:focus {
+    color: #ffffff !important;
+    background-color: transparent !important;
+    opacity: 1 !important;
+    text-decoration: none !important;
   }
 </style>
 
