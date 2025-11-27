@@ -64,14 +64,18 @@ redirect_from:
 
 
 <style>
-/* --- HOMEPAGE STYLES --- */
+/* --- HOMEPAGE STYLES (CORRECTED CONSISTENCY) --- */
 
-/* Define standard colors for consistency */
+/* Define standard colors */
 :root {
     --brand-purple: #54278f;
     --brand-teal: #00BFA5;
     --brand-teal-dark: #008c7a;
     --brand-purple-pale: #f4effc; /* Light purple wash for banner bg */
+    
+    /* Standardized Dark Heading Color (Matches People/Opp/Pubs pages) */
+    --heading-dark: #2c3e50; 
+    
     --text-dark: #2c3e50;
     --text-medium: #4a4a4a;
     --border-light: #e5e7eb;
@@ -88,13 +92,13 @@ redirect_from:
   max-width: 100%;
   height: auto;
   margin-bottom: 10px;
-  border-radius: 4px; /* Optional: slight rounding for modernity */
+  border-radius: 4px;
 }
 
 .home-intro-media p {
   font-size: 0.9em;
   font-style: italic;
-  color: #7f8c8d; /* Keep standard caption gray */
+  color: #7f8c8d;
   margin: 0;
 }
 
@@ -102,12 +106,12 @@ redirect_from:
 .home-intro-text p {
   font-size: 1.0em;
   line-height: 1.6;
-  color: var(--text-dark); /* Standard dark gray text */
+  color: var(--text-dark);
   margin-bottom: 1.5em;
 }
 
 .home-intro-text strong {
-    color: #1a202c; /* Slightly darker for emphasis */
+    color: #1a202c;
 }
 
 /* Inline links set to Teal */
@@ -124,8 +128,9 @@ redirect_from:
 
 /* Call to Action (CTA) Banner */
 .home-cta-banner {
-  background-color: var(--brand-purple-pale); /* Pale purple background */
-  border-left: 5px solid var(--brand-purple); /* Solid purple accent border */
+  background-color: var(--brand-purple-pale);
+  /* Keep the border purple for brand identity structure */
+  border-left: 5px solid var(--brand-purple); 
   padding: 25px;
   margin: 35px 0;
   border-radius: 6px;
@@ -135,7 +140,8 @@ redirect_from:
 .home-cta-banner h3 {
   margin-top: 0;
   margin-bottom: 15px;
-  color: var(--brand-purple); /* Heading is purple brand color */
+  /* <--- CORRECTION: Changed from Purple to standard Heading Dark */
+  color: var(--heading-dark); 
   display: flex;
   align-items: center;
   gap: 10px;
@@ -154,6 +160,7 @@ redirect_from:
     color: #fff !important;
     padding: 0.75rem 1.5rem;
     font-weight: 600;
+    font-size: 1.05rem;
     transition: all 0.2s ease;
 }
 
@@ -171,7 +178,8 @@ redirect_from:
   padding-bottom: 10px;
   margin-top: 40px;
   margin-bottom: 30px;
-  color: var(--brand-purple); /* Consistent purple heading */
+  /* <--- CORRECTION: Changed from Purple to standard Heading Dark */
+  color: var(--heading-dark);
   display: flex;
   align-items: center;
   gap: 10px;
@@ -185,7 +193,7 @@ redirect_from:
 
 .news-item {
   display: flex;
-  gap: 20px; /* Increased gap slightly for cleaner look */
+  gap: 20px;
   margin-bottom: 25px;
   align-items: baseline;
 }
@@ -193,7 +201,7 @@ redirect_from:
 .news-date {
   min-width: 85px;
   text-align: right;
-  color: #7f8c8d; /* Medium gray for dates */
+  color: #7f8c8d;
   font-weight: 600;
   font-size: 0.9em;
   padding-top: 3px;
@@ -202,7 +210,7 @@ redirect_from:
 }
 
 .news-content {
-  /* Replaced Navy border with bright Teal accent border */
+  /* Keep the accent border Teal for consistency with interactive elements */
   border-left: 3px solid var(--brand-teal);
   padding-left: 20px;
   color: var(--text-medium);
@@ -224,7 +232,7 @@ redirect_from:
     padding-bottom: 5px;
   }
   .news-content {
-      border-left-width: 4px; /* Slightly thicker border on mobile for visibility */
+      border-left-width: 4px;
   }
 }
 </style>
