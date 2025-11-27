@@ -11,6 +11,13 @@ redirect_from:
 
 <style>
 /* CV Page Styles */
+/* Define your brand colors for easy updating */
+:root {
+    --brand-teal: #00BFA5;
+    --brand-teal-dark: #008c7a; /* For hovers */
+    --brand-teal-pale: #E0F7FA; /* A very light wash for backgrounds */
+}
+
 .cv-download-section {
   padding-bottom: 1.25rem;
   border-bottom: 1px solid #e5e7eb;
@@ -22,11 +29,14 @@ redirect_from:
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   font-size: 0.875rem;
   padding: 0.625rem 1.25rem;
-  background-color: #1F3A5F !important;
+  /* CHANGED TO TEAL */
+  background-color: var(--brand-teal) !important;
+  color: #ffffff !important; /* Ensure text is white */
 }
 
 .cv-download-btn:hover {
-  background-color: #162947 !important;
+  /* CHANGED TO DARKER TEAL HOVER */
+  background-color: var(--brand-teal-dark) !important;
 }
 
 .cv-section-title {
@@ -52,14 +62,18 @@ redirect_from:
 
 .cv-section-title:hover .cv-section-icon {
   transform: scale(1.1);
+  /* Optional: Add a subtle glow on hover */
+  box-shadow: 0 0 10px rgba(0, 191, 165, 0.3);
 }
 
 .cv-section-icon--education,
 .cv-section-icon--work,
 .cv-section-icon--research {
-  color: #1F3A5F;
-  background-color: #EEF2FB;
-  border: 2px solid #1F3A5F;
+  /* CHANGED Icon color and border to TEAL */
+  color: var(--brand-teal);
+  border: 2px solid var(--brand-teal);
+  /* CHANGED background to a pale teal wash instead of pale blue for better harmony */
+  background-color: var(--brand-teal-pale);
 }
 
 .cv-section-content {
@@ -70,7 +84,8 @@ redirect_from:
 
 .cv-section-content--education,
 .cv-section-content--work {
-  border-left: 4px solid #1F3A5F;
+  /* CHANGED left border line to TEAL */
+  border-left: 4px solid var(--brand-teal);
 }
 
 .cv-item {
@@ -115,14 +130,17 @@ redirect_from:
 }
 
 .cv-interest-tag {
-  background-color: #EEF2FB;
-  color: #1F3A5F;
+  /* CHANGED background to pale teal wash */
+  background-color: var(--brand-teal-pale);
+  /* CHANGED text color to TEAL */
+  color: var(--brand-teal-dark); /* Using the darker teal for better readability on light background */
   padding: 0.625rem 1.25rem;
   border-radius: 30px;
-  border: 1px solid #d0d9f0;
+  /* CHANGED border to bright teal */
+  border: 1px solid var(--brand-teal);
   font-size: 1em;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  font-weight: 500;
+  font-weight: 600; /* Made slightly bolder for emphasis */
 }
 </style>
 
