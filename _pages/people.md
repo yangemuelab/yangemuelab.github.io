@@ -11,8 +11,8 @@ author_profile: false
   <h2>Principal Investigator</h2>
   <div class="people-grid pi-grid">
     <article class="person-card pi-card">
-      <img src="{{ '/images/profile.jpg' | relative_url }}" alt="Portrait of Lei Yang" loading="lazy">
-      <h3><a href="/cv/">Lei Yang, Ph.D.</a></h3>
+      <a href="/cv/"><img src="{{ '/images/profile.jpg' | relative_url }}" alt="Portrait of Lei Yang" loading="lazy"></a>
+      <h3>Lei Yang, Ph.D.</h3>
     </article>
   </div>
 </section>
@@ -123,18 +123,24 @@ author_profile: false
   border-radius: 12px;
   margin-bottom: 0.75rem;
   box-shadow: 0 12px 24px rgba(15, 23, 42, 0.16);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: block;
+}
+
+.pi-card a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.pi-card a:hover img {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 32px rgba(15, 23, 42, 0.2);
 }
 
 .pi-card h3 {
   font-size: 1.0rem;
   color: #1F3A5F;
   margin-bottom: 0;
-}
-
-.pi-card h3 a,
-.pi-card h3 a:visited {
-  color: inherit;
-  text-decoration: none;
 }
 
 .person-card {
