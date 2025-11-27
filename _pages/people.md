@@ -60,17 +60,21 @@ author_profile: false
 <section class="people-section" id="graduates">
   <h2>Graduate Students</h2>
   <div class="people-grid">
-    <article class="person-card placeholder">
-      <h3>Open position</h3>
+    <article class="person-card">
+      <img src="{{ '/images/bio-photo.jpg' | relative_url }}" alt="Portrait" class="person-photo" loading="lazy">
+      <h3>Name 1</h3>
       <p class="person-role">Ph.D. Student</p>
       <p class="person-edu">Background in Engineering</p>
       <p class="person-focus">Research interests in AI-driven composite design</p>
+      <p class="person-email"><a href="mailto:email1@example.com">email1@example.com</a></p>
     </article>
-    <article class="person-card placeholder">
-      <h3>Open Position</h3>
+    <article class="person-card">
+      <img src="{{ '/images/bio-photo-2.jpg' | relative_url }}" alt="Portrait" class="person-photo" loading="lazy">
+      <h3>Name 2</h3>
       <p class="person-role">M.S. Student</p>
       <p class="person-edu">Background in Engineering</p>
       <p class="person-focus">Research interests in Geomechanics</p>
+      <p class="person-email"><a href="mailto:email2@example.com">email2@example.com</a></p>
     </article>
   </div>
 </section>
