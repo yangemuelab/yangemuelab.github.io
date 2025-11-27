@@ -23,98 +23,66 @@
 </div>
 
 <style>
-.masthead--accent,
-.masthead.masthead--accent {
-  background: #54278f !important;
+:root {
+  --header-bg: #54278f;
+  --header-text: #ffffff;
+  --header-hover: #d6c6ff;
+  --nav-text: #111827;
+  --nav-hover: #54278f;
 }
 
-.masthead__inner-wrap {
+.masthead--accent { background: var(--header-bg) !important; }
+
+.masthead__inner-wrap,
+.masthead__menu,
+.greedy-nav,
+.greedy-nav button,
+.masthead__menu--boxed .visible-links,
+.visible-links,
+.masthead__menu-item {
   background: transparent !important;
 }
 
-.masthead__menu {
-  background: transparent !important;
-}
-
-.greedy-nav {
-  background: transparent !important;
-}
-
-.greedy-nav button {
-  background-color: transparent !important;
-}
-
-/* Make hamburger icon lines visible - match lab brand color */
 .greedy-nav button .navicon,
 .greedy-nav button .navicon::before,
-.greedy-nav button .navicon::after {
-  background-color: #ffffff !important;
-}
-
-.greedy-nav button .navicon::before {
-  top: -8px !important;
-  bottom: auto !important;
-}
-
-.greedy-nav button .navicon::after {
-  top: 8px !important;
-  bottom: auto !important;
-}
-
-/* Keep hamburger icon as three lines even when menu is open */
+.greedy-nav button .navicon::after,
 .greedy-nav button.close .navicon,
 .greedy-nav button.close .navicon::before,
 .greedy-nav button.close .navicon::after {
-  background-color: #ffffff !important;
-  -webkit-transform: none !important;
+  background-color: var(--header-text) !important;
   transform: none !important;
 }
 
-.greedy-nav button.close .navicon::before {
-  top: -8px !important;
-  bottom: auto !important;
-}
-
-.greedy-nav button.close .navicon::after {
-  top: 8px !important;
-  bottom: auto !important;
-}
+.greedy-nav button .navicon::before,
+.greedy-nav button.close .navicon::before { top: -8px !important; }
+.greedy-nav button .navicon::after,
+.greedy-nav button.close .navicon::after { top: 8px !important; }
 
 .masthead__menu--boxed .visible-links {
   display: flex;
   align-items: center;
   gap: 1.5rem;
   width: 100%;
-  background: transparent !important;
-}
-
-.visible-links {
-  background: transparent !important;
-}
-
-.masthead__menu-item {
-  background-color: transparent; /* Override default white background */
 }
 
 .masthead__menu-item--lg {
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #ffffff;
+  color: var(--header-text);
   margin-right: auto;
 }
 
 .masthead__menu-item--lg a {
-  font-size: 2.0rem; /* YANG RESEARCH LAB TITLE SIZE */
-  color: #ffffff !important; /* YANG RESEARCH LAB COLOR */
+  font-size: 2rem;
+  color: var(--header-text) !important;
 }
 
-.masthead__menu-item--lg a:hover {
-  color: #d6c6ff !important;
-}
+.masthead__menu-item--lg a:hover { color: var(--header-hover) !important; }
 
-.masthead__menu--boxed a {
-  color: #111827;
+.masthead__menu--boxed a,
+.greedy-nav .hidden-links a {
+  color: var(--nav-text);
   text-decoration: none;
   font-weight: 400;
   letter-spacing: 0.08em;
@@ -122,23 +90,13 @@
   text-transform: uppercase;
 }
 
-.masthead__menu--boxed a:hover {
-  color: #54278f; /* Blue color on hover, matching original lab brand hover */
-}
-
-/* Hidden menu links - uppercase to match visible links */
-.greedy-nav .hidden-links a {
-  text-transform: uppercase;
-}
-
+.masthead__menu--boxed a:hover,
 .greedy-nav .hidden-links a:hover {
-  color: #54278f !important; /* Blue color on hover, matching original lab brand hover */
-  background: transparent;
+  color: var(--nav-hover) !important;
 }
 </style>
 
 <script>
-// Close menu when clicking a dropdown link
 $(document).on('click', '#site-nav .hidden-links a', function() {
   $('#site-nav button').removeClass('close');
   $('#site-nav .hidden-links').addClass('hidden');
