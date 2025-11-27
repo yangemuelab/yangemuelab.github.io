@@ -81,8 +81,14 @@
   transition: opacity 0.2s ease;
 }
 
-.masthead__menu-item--lg a:hover {
+.masthead__menu-item--lg a:hover,
+.masthead__menu-item--lg a:active,
+.masthead__menu-item--lg a:focus,
+.masthead__menu-item--lg a:visited {
   color: var(--header-text) !important;
+}
+
+.masthead__menu-item--lg a:hover {
   opacity: 0.9;
 }
 
