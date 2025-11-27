@@ -85,9 +85,24 @@ author_profile: false
 </section>
 
 <style>
+/* --- UPDATED PEOPLE PAGE STYLES (CONSISTENT HEADINGS) --- */
+
+/* Define Color Variables for consistency */
+:root {
+    --brand-teal: #00BFA5;
+    --brand-teal-dark: #008c7a;
+    --brand-teal-pale: #E0F7FA; /* A very light wash */
+    
+    /* Neutral Grays for Text Hierarchy (No Purple) */
+    --heading-dark: #2c3e50; /* Professional Dark Slate for section headers */
+    --text-dark: #1a202c;    /* Deep Charcoal for primary names */
+    --text-medium: #4a4a4a;  /* Medium gray for roles and descriptions */
+    --border-light: #e5e7eb; /* Standard light gray border used on other pages */
+}
+
 .page__title {
   text-align: left;
-  margin-bottom: 0.5em; /* Match default page title spacing */
+  margin-bottom: 0.5em;
 }
 
 .people-section {
@@ -95,19 +110,25 @@ author_profile: false
 }
 
 .people-section:first-of-type {
-  margin-top: 0; /* No extra spacing - matches default page title to paragraph spacing */
+  margin-top: 0;
 }
 
 .people-section:first-of-type h2 {
-  margin-top: 0; /* Remove h2's default margin-top for first section */
+  margin-top: 0;
 }
 
+/* --- Section Headings (CONSISTENT WITH OTHER PAGES) --- */
 .people-section h2 {
-  font-size: 1.25rem;
-  color: #1F3A5F;
-  border-bottom: 2px solid #d5dbee;
-  padding-bottom: 0.4rem;
-  margin-bottom: 1.2rem;
+  /* Matched size and weight to Opportunities page */
+  font-size: 1.375rem; 
+  font-weight: 600;
+  /* Matched color */
+  color: var(--heading-dark); 
+  /* Matched standard gray border */
+  border-bottom: 2px solid var(--border-light); /* PREVIOUS: #d5dbee */
+  /* Matched spacing */
+  padding-bottom: 0.75rem; /* PREVIOUS: 0.4rem */
+  margin-bottom: 1.25rem; /* PREVIOUS: 1.2rem */
 }
 
 .people-grid {
@@ -124,6 +145,8 @@ author_profile: false
   font-style: italic;
   color: #6b7280;
 }
+
+/* --- Principal Investigator (PI) Specific Styles --- */
 .pi-grid {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   justify-items: center;
@@ -159,12 +182,15 @@ author_profile: false
   box-shadow: 0 16px 32px rgba(15, 23, 42, 0.2);
 }
 
+/* PI Name */
 .pi-card h3 {
-  font-size: 1.0rem;
-  color: #1F3A5F;
+  font-size: 1.1rem;
+  color: var(--text-dark);
   margin-bottom: 0;
+  font-weight: 700; /* Bolder for PI */
 }
 
+/* --- General Person Card Styles --- */
 .person-card {
   border: 1px solid #e6e6e6;
   border-radius: 8px;
@@ -178,7 +204,8 @@ author_profile: false
 .person-card:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 18px rgba(15, 23, 42, 0.16);
-  border-color: #d5dbee;
+  /* Border turns Teal on hover for modern interaction feel */
+  border-color: var(--brand-teal);
 }
 
 .person-photo {
@@ -191,46 +218,55 @@ author_profile: false
   box-shadow: 0 4px 8px rgba(15, 23, 42, 0.12);
 }
 
+/* Person Name */
 .person-card h3 {
   margin: 0;
-  font-size: 1.0rem;
-  color: #1F3A5F;
+  font-size: 1.05rem;
+  color: var(--text-dark);
+  font-weight: 600;
 }
 
+/* Person Role */
 .person-role {
   font-weight: 500;
-  color: #29466c;
+  color: var(--text-medium);
   margin-top: 0.4rem;
   margin-bottom: 0.6rem;
 }
 
+/* Person Education & Focus text */
 .person-edu,
 .person-focus {
   font-size: 0.95rem;
-  color: #4a4a4a;
+  color: var(--text-medium);
   margin-bottom: 0.5rem;
+  line-height: 1.5;
 }
 
+/* Email Link Container */
 .person-email {
   margin-top: 0.75rem;
   margin-bottom: 0;
   font-size: 0.9rem;
 }
 
+/* Email Link - Using your existing Teal colors via variables */
 .person-email a {
-  color: #00BFA5;
+  color: var(--brand-teal);
   text-decoration: none;
   transition: color 0.2s ease;
+  font-weight: 500;
 }
 
 .person-email a:hover {
-  color: #008c7a;
+  color: var(--brand-teal-dark);
   text-decoration: underline;
 }
 
+/* Placeholder style for alumni or future posts */
 .person-card.placeholder {
   text-align: center;
-  background: linear-gradient(135deg, #f8faff, #eef2fb);
+  background: linear-gradient(135deg, #ffffff, var(--brand-teal-pale));
   border-style: dashed;
   border-color: #bfcde9;
 }
