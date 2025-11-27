@@ -126,12 +126,29 @@
   color: var(--nhov) !important;
 }
 
-/* Force brand name to stay white on click and focus */
-.masthead__menu-item--lg a:active,
-.masthead__menu-item--lg a:focus {
-  color: #fff !important;
+/* Force brand name to stay white in all states */
+.masthead__menu-item--lg.persist a,
+.masthead__menu-item--lg.persist a:link,
+.masthead__menu-item--lg.persist a:visited,
+.masthead__menu-item--lg.persist a:hover,
+.masthead__menu-item--lg.persist a:active,
+.masthead__menu-item--lg.persist a:focus,
+.masthead__menu--boxed .masthead__menu-item--lg.persist a,
+.masthead__menu--boxed .masthead__menu-item--lg.persist a:link,
+.masthead__menu--boxed .masthead__menu-item--lg.persist a:visited,
+.masthead__menu--boxed .masthead__menu-item--lg.persist a:hover,
+.masthead__menu--boxed .masthead__menu-item--lg.persist a:active,
+.masthead__menu--boxed .masthead__menu-item--lg.persist a:focus,
+.greedy-nav .masthead__menu-item--lg.persist a,
+.greedy-nav .masthead__menu-item--lg.persist a:link,
+.greedy-nav .masthead__menu-item--lg.persist a:visited,
+.greedy-nav .masthead__menu-item--lg.persist a:hover,
+.greedy-nav .masthead__menu-item--lg.persist a:active,
+.greedy-nav .masthead__menu-item--lg.persist a:focus {
+  color: #ffffff !important;
   background-color: transparent !important;
   opacity: 1 !important;
+  text-decoration: none !important;
 }
 </style>
 
