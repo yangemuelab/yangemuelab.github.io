@@ -12,8 +12,8 @@ author_profile: false
 .opportunities-intro {
   margin-bottom: 2rem;
   padding: 1.25rem;
-  background-color: #f8f9fa;
-  border-left: 4px solid #1F3A5F;
+  background-color: #f4effc;
+  border-left: 4px solid #54278f;
   border-radius: 4px;
   color: #4b5563;
   font-size: 1.0625rem;
@@ -192,6 +192,16 @@ author_profile: false
   Our group is diverse and has broad research interests. We do basic to applied research, which means we focus on the fundamentals, physics and mechanisms which can be applied to real-world applications. In our group, we respect each member's research interests and pride ourselves on being highly supportive of each other.
 </div>
 
+<div class="opportunities-image-container">
+  <img src="/images/join_us_nolabname.png" alt="Join us">
+  <div class="opportunities-image-caption">
+    <h3 class="opportunities-image-caption-title">Interested in Joining Us?</h3>
+    <p class="opportunities-image-caption-text">
+      Email your <strong>CV</strong> and brief <strong>research statement</strong> to us today!
+    </p>
+  </div>
+</div>
+
 <div class="opportunities-section">
   <h2 class="opportunities-section-title">Who We're Looking For</h2>
   <div class="opportunities-content">
@@ -218,12 +228,3 @@ author_profile: false
   </div>
 </div>
 
-<div class="opportunities-image-container">
-  <img src="/images/join_us_nolabname.png" alt="Join us">
-  <div class="opportunities-image-caption">
-    <h3 class="opportunities-image-caption-title">Interested in Joining Us?</h3>
-    <p class="opportunities-image-caption-text">
-      If you are interested in joining us, please feel free to reach out together with your <strong>CV</strong> and brief <strong>research statement</strong>.
-    </p>
-  </div>
-</div>
