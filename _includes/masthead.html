@@ -125,6 +125,14 @@
 .greedy-nav .hidden-links a:hover {
   color: var(--nhov) !important;
 }
+
+/* Force brand name to stay white on click and focus */
+.masthead__menu-item--lg a:active,
+.masthead__menu-item--lg a:focus {
+  color: #fff !important;
+  background-color: transparent !important;
+  opacity: 1 !important;
+}
 </style>
 
 <script>
