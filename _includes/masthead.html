@@ -76,9 +76,30 @@
 .masthead__menu-item--lg a {
   font-size: 2rem;
   color: var(--header-text) !important;
+  text-decoration: none;
+  position: relative;
+  transition: opacity 0.2s ease;
 }
 
-.masthead__menu-item--lg a:hover { color: var(--header-hover) !important; }
+.masthead__menu-item--lg a:hover {
+  color: var(--header-text) !important;
+  opacity: 0.9;
+}
+
+.masthead__menu-item--lg a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--header-text);
+  transition: width 0.3s ease;
+}
+
+.masthead__menu-item--lg a:hover::after {
+  width: 100%;
+}
 
 .masthead__menu--boxed a,
 .greedy-nav .hidden-links a {
