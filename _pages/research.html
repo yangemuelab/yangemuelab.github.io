@@ -164,33 +164,34 @@ author_profile: false
 
 /* --- Project Card (The Main Container) --- */
 .project-card {
+    /* Base Layout */
     border: 1px solid var(--border-light);
     border-radius: 8px;
     padding: 0.5rem 0.5rem 1.5rem 0.5rem; 
     background-color: #fff;
+    margin-bottom: 2rem;
     
     /* 1. Base/Resting Shadow (Subtle) */
     box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08); 
-    margin-bottom: 2rem;
     
-    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out, border-color 0.3s ease-out;
-    border: 1px solid var(--border-light); /* Ensure border is defined for coloring */
+    /* 2. Transition (CRITICAL for smooth animation) */
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
 }
 
-/* 💡 HOVER EFFECT APPLIED TO THE ENTIRE CARD (YouTube Style) */
+/* 💡 ACADEMIC HOVER EFFECT (Clean Lift + White/Gray Glow) */
 .project-card:hover {
-    transform: translateY(-5px); /* LIFT the whole card up by 5px */
+    /* 1. LIFT: Elevates the whole card */
+    transform: translateY(-5px); 
     
-    /* 1. Deep Shadow (for depth) */
+    /* 2. POP-UP SHADOW: Layered for professional depth and highlight */
     box-shadow: 
-        0 12px 25px rgba(0, 0, 0, 0.2), /* Deep shadow for lift */
-        0 4px 10px rgba(0, 0, 0, 0.1),  /* Closer shadow */
+        /* Deep Shadow (for realistic lift/depth) */
+        0 12px 25px rgba(0, 0, 0, 0.15), 
+        0 4px 10px rgba(0, 0, 0, 0.08),  
         
-        /* 2. TEAL GLOW ACCENT (The YouTube light pop-up) */
-        0 0 15px 5px rgba(0, 191, 165, 0.35); /* Soft, colored glow using a transparent Teal */
-        
-    /* 3. OPTIONAL: Accent the border color slightly */
-    border-color: var(--brand-teal);
+        /* Crisp Outline Glow (The clean highlight) */
+        0 0 0 2px rgba(220, 220, 220, 0.8), 
+        0 0 10px 1px rgba(0, 0, 0, 0.05); 
 }
 
 /* --- FULL-WIDTH FIGURE/VIDEO --- */
