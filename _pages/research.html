@@ -20,11 +20,14 @@ author_profile: false
 {% endcomment %}
 
 <section class="research-section" id="project-one">
-  <h2>Project 1: Extreme Mechanics for Underground Engineering</h2>
+  <h2>Project 1: Hypervelocity Impact Loading into Competent Rocks</h2>
   <div class="project-card">
     
     <div class="project-figure--full">
-      <img src="{{ '/images/project-1-figure.jpg' | relative_url }}" alt="Figure illustrating Project 1" loading="lazy">
+      <video controls autoplay loop muted playsinline>
+          <source src="{{ '/research/Hypervelocity_Impact_into_Rocks.mp4' | relative_url }}" type="video/mp4">
+          Your browser does not support the video tag.
+      </video>
     </div>
     
     <div class="project-intro--below">
@@ -170,7 +173,9 @@ author_profile: false
     overflow: hidden;
 }
 
-.project-figure--full img {
+/* 💡 Apply styles directly to both img and video within this container */
+.project-figure--full img,
+.project-figure--full video { /* *** MODIFIED: Added video selector *** */
     width: 100%;
     height: auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -178,8 +183,9 @@ author_profile: false
     transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
 }
 
-/* --- Figure Hover Effect (applied to the full-width figure) --- */
-.project-figure--full:hover img {
+/* --- Figure Hover Effect (applied to the full-width figure/video container) --- */
+.project-figure--full:hover img,
+.project-figure--full:hover video { /* *** MODIFIED: Added video selector *** */
     transform: translateY(-5px); 
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2), 
                 0 4px 10px rgba(0, 0, 0, 0.1); 
