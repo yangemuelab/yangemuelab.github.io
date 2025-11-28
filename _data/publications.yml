@@ -15,6 +15,15 @@
 #   journal_url: "https://..." (optional)
 #   scholar_url: "https://..." (optional)
 
+- title: "Hypervelocity impacts into basalt: time-resolved experiments and mechanism-based simulation"
+  authors: "Lei Yang, Minh T Lê, Justin Moreno, K.T. Ramesh"
+  type: "journal"
+  journal: "ESS Open Archive"
+  year: 2025
+  journal_url: "https://doi.org/10.22541/essoar.175130112.22862809/v1"
+  scholar_url: "https://scholar.google.com/scholar?hl=zh-CN&as_sdt=0%2C5&q=Hypervelocity+impacts+into+basalt%3A+time-resolved+experiments+and+mechanism-based+simulation&btnG="
+  project: "project-one"
+
 - title: "A mechanism‐based constitutive model for competent rocks subjected to impact loading"
   authors: "Lei Yang, Brett S. Kuwik, Shachi Singh, Sohanjit Ghosh, Justin Moreno, Ryan Hurley, K. T. Ramesh"
   type: "journal"

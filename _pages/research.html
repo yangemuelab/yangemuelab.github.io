@@ -262,20 +262,20 @@ author_profile: false
 
 /* 💡 NEW FANCY SYMBOL STYLING */
 .read-more-link::after { 
-    content: " \25BD"; /* Filled Downward Triangle (▼) */
+    content: "\25BD"; /* Filled Downward Triangle (▼) */
     font-size: 0.9em;
-    margin-left: 0.5em;
+    margin-left: 0.25em;
     display: inline-block;
     transition: content 0.3s ease; /* Transition for visual consistency */
 }
 
 .read-more-link.active::after { 
-    content: " \25B3"; /* Filled Upward Triangle (▲) */
+    content: "\25B3"; /* Filled Upward Triangle (▲) */
 }
 
 .read-more-link:hover {
     color: var(--brand-teal-dark);
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 /* --- COLLAPSIBLE PUBLICATION SECTION --- */
