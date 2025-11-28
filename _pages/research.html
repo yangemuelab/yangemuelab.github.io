@@ -168,19 +168,29 @@ author_profile: false
 
 /* --- Project Card (The Main Container) --- */
 .project-card {
-    /* Base Layout */
+    position: relative;
     border: 1px solid var(--border-light);
     border-radius: 12px;
     padding: 1.25rem;
     background-color: #fff;
     margin-bottom: 2.5rem;
     box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08); 
-    
-    /* Transition and Layout */
     transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
     display: flex;
     flex-direction: column;
     gap: 1.75rem;
+    overflow: hidden;
+}
+
+.project-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(31, 58, 95, 0), rgba(0, 191, 165, 0.18));
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
 }
 
 /* 💡 ACADEMIC HOVER EFFECT (Clean Lift + White/Gray Glow) */
@@ -199,6 +209,10 @@ author_profile: false
         0 0 10px 1px rgba(0, 0, 0, 0.05); 
 }
 
+.project-card:hover::after {
+    opacity: 1;
+}
+
 /* --- FULL-WIDTH FIGURE/VIDEO --- */
 .project-figure--full {
     position: relative;
@@ -210,35 +224,9 @@ author_profile: false
 }
 
 /* Added styles for hover visual feedback on video/figure */
-.project-figure--full::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, rgba(20, 22, 40, 0.15), rgba(0, 191, 165, 0.15));
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    pointer-events: none;
-}
-
+.project-figure--full::after,
 .project-figure--full::before {
-    content: "\25B6";
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2.75rem;
-    color: rgba(255,255,255,0.85);
-    opacity: 0;
-    transform: scale(0.9);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    pointer-events: none;
-}
-
-.project-figure--full:hover::after,
-.project-figure--full:hover::before {
-    opacity: 1;
-    transform: scale(1);
+    display: none;
 }
 
 .project-figure--full img,
