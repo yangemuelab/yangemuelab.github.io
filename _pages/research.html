@@ -173,17 +173,24 @@ author_profile: false
     box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08); 
     margin-bottom: 2rem;
     
-    /* 2. ADD TRANSITION TO THE ENTIRE CARD */
-    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out, border-color 0.3s ease-out;
+    border: 1px solid var(--border-light); /* Ensure border is defined for coloring */
 }
 
 /* 💡 HOVER EFFECT APPLIED TO THE ENTIRE CARD (YouTube Style) */
 .project-card:hover {
     transform: translateY(-5px); /* LIFT the whole card up by 5px */
     
-    /* POP-UP SHADOW: Layered for depth */
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2), 
-                0 4px 10px rgba(0, 0, 0, 0.1); 
+    /* 1. Deep Shadow (for depth) */
+    box-shadow: 
+        0 12px 25px rgba(0, 0, 0, 0.2), /* Deep shadow for lift */
+        0 4px 10px rgba(0, 0, 0, 0.1),  /* Closer shadow */
+        
+        /* 2. TEAL GLOW ACCENT (The YouTube light pop-up) */
+        0 0 15px 5px rgba(0, 191, 165, 0.35); /* Soft, colored glow using a transparent Teal */
+        
+    /* 3. OPTIONAL: Accent the border color slightly */
+    border-color: var(--brand-teal);
 }
 
 /* --- FULL-WIDTH FIGURE/VIDEO --- */
@@ -373,33 +380,40 @@ author_profile: false
 </style>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-  const toggleLinks = document.querySelectorAll('.toggle-link');
-
-  toggleLinks.forEach(link => {
-    // Initial state setup (hiding content via CSS max-height: 0)
-    // No JS needed to hide initially, just good to know the CSS handles it.
-
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-
-      const targetElement = document.querySelector(this.getAttribute('data-target'));
-
+  document.addEventListener('DOMContentLoaded', function() {
+    const toggleLinks = document.querySelectorAll('.toggle-link');
+  
+    toggleLinks.forEach(link => {
+      
+      // Initial state setup: Ensure content is hidden on page load
+      const targetId = link.getAttribute('data-target');
+      const targetElement = document.querySelector(targetId);
       if (targetElement) {
-        // 1. Toggle the 'expanded' class on the target content
-        targetElement.classList.toggle('expanded');
-        
-        // 2. Toggle the 'active' class on the link (triggers CSS symbol change)
-        this.classList.toggle('active'); 
-        
-        // 3. Toggle the link text
-        if (targetElement.classList.contains('expanded')) {
-          this.innerHTML = "Hide Relevant Publications"; 
-        } else {
-          this.innerHTML = "See Relevant Publications"; 
-        }
+          // This line ensures the content is hidden when the script loads,
+          // relying on the CSS: .publications-collapsible { max-height: 0; }
+          targetElement.classList.remove('expanded');
       }
+  
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+  
+        const targetElement = document.querySelector(this.getAttribute('data-target'));
+  
+        if (targetElement) {
+          // 1. Toggle the 'expanded' class (makes content visible via CSS)
+          targetElement.classList.toggle('expanded');
+          
+          // 2. Toggle the 'active' class (triggers the CSS symbol change)
+          this.classList.toggle('active'); 
+          
+          // 3. Toggle the link text
+          if (targetElement.classList.contains('expanded')) {
+            this.innerHTML = "Hide Relevant Publications"; 
+          } else {
+            this.innerHTML = "See Relevant Publications"; 
+          }
+        }
+      });
     });
   });
-});
-</script>
+  </script>
