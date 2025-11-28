@@ -20,23 +20,25 @@ author_profile: false
 {% endcomment %}
 
 <section class="research-section" id="project-one">
-  <h2>Project 1: Hypervelocity Impact Loading into Competent Rocks</h2>
+  <h2>Project 1: Hypervelocity Impact into Competent Rocks</h2>
   <div class="project-card">
     
     <div class="project-figure--full">
-      <video controls autoplay loop muted playsinline>
+      <video autoplay loop muted playsinline>
           <source src="{{ '/research/Hypervelocity_Impact_into_Rocks.mp4' | relative_url }}" type="video/mp4">
           Your browser does not support the video tag.
       </video>
     </div>
     
     <div class="project-intro--below">
-      <p>This research aims to understand the non-linear behavior of geomaterials under high-stress conditions typically found in deep underground environments. We utilize advanced computational methods (e.g., FEM, DEM) coupled with novel experimental techniques.</p>
-      <ul>
-          <li><strong>Key Goal:</strong> Develop constitutive models for large-scale geotechnical systems.</li>
-          <li><strong>Method:</strong> Integrating Machine Learning with classic mechanics principles.</li>
-          <li><strong>Sponsor:</strong> National Science Foundation (NSF).</li>
-      </ul>
+      <p>This research aims to understand the behavior of brittle rocks subjected to hypervelocity impact 
+        loading. We use the HyFIRE facility in HEMI at Johns Hopkins University to impact a basalt cube at 5.0 km/s with 
+        a 3 mm, aluminum sphere. In-situ diagnostics including ultrahigh speed camerates at 2 millions fps and flash X-ray 
+        with 2 million fps are integrated to visualize the impact process. In this experiemnts, we are particularly 
+        interested inmeasuring the impact crater diameter and ejecta angle as a function of time. Our experimental results
+        are useful for planetary science and defense communities to benchmark hydrocodes and validate constitutive models.
+      </p>
+
       <a href="#pubs-project-one" class="read-more-link">See Relevant Publications ↓</a>
     </div>
 
@@ -181,6 +183,15 @@ author_profile: false
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: block;
     transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+/* 2. Download Prevention (Combined) */
+.project-figure--full img,
+.project-figure--full video {
+    /* Prevents right-click 'Save As', drag-and-drop, and selection */
+    user-select: none;
+    pointer-events: none;
+    -webkit-user-drag: none; 
 }
 
 /* --- Figure Hover Effect (applied to the full-width figure/video container) --- */
