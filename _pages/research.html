@@ -11,14 +11,6 @@ author_profile: false
   We integrate experiments, theory, computational modeling, AI and AM to understand extreme events and extreme conditions. Below are our key research areas.
 </p>
 
-{% comment %}
-<div class="grid__wrapper">
-  {% for post in site.research %}
-    {% include archive-single.html type="grid" %}
-  {% endfor %}
-</div>
-{% endcomment %}
-
 <section class="research-section" id="project-one">
   <h2>Project 1: Hypervelocity Impact on Competent Rocks</h2>
   <div class="project-card">
@@ -39,10 +31,14 @@ author_profile: false
         are useful for planetary science and defense communities to benchmark hydrocodes and validate constitutive models.
       </p>
 
-      <a href="#pubs-project-one" class="read-more-link">See Relevant Publications ↓</a>
+      <a href="javascript:void(0);" 
+         class="read-more-link toggle-link" 
+         data-target="#project-one-pubs-content">
+        See Relevant Publications
+      </a>
     </div>
 
-    <div class="project-pubs" id="pubs-project-one">
+    <div class="project-pubs publications-collapsible" id="project-one-pubs-content">
       <h3>Relevant Publications</h3>
       {% assign relevant_pubs = site.data.publications | where: "project", "project-one" | limit: 3 %}
       {% if relevant_pubs.size > 0 %}
@@ -91,9 +87,16 @@ author_profile: false
           <li><strong>Key Goal:</strong> Optimize microstructures using neural networks.</li>
           <li><strong>Method:</strong> Generative Adversarial Networks (GANs).</li>
       </ul>
-      <a href="#pubs-project-two" class="read-more-link">See Relevant Publications ↓</a>
+      
+      <a href="javascript:void(0);" 
+         class="read-more-link toggle-link" 
+         data-target="#project-two-pubs-content">
+        See Relevant Publications
+      </a>
+      
     </div>
-    <div class="project-pubs" id="pubs-project-two">
+    
+    <div class="project-pubs publications-collapsible" id="project-two-pubs-content">
       <h3>Relevant Publications</h3>
       {% assign relevant_pubs = site.data.publications | where: "project", "project-two" | limit: 3 %}
       {% if relevant_pubs.size > 0 %}
@@ -168,16 +171,15 @@ author_profile: false
     margin-bottom: 2rem;
 }
 
-/* --- FULL-WIDTH FIGURE (NEW BLOCK) --- */
+/* --- FULL-WIDTH FIGURE/VIDEO --- */
 .project-figure--full {
     margin: 0 auto 1.5rem auto; 
     border-radius: 6px; 
     overflow: hidden;
 }
 
-/* 💡 Apply styles directly to both img and video within this container */
 .project-figure--full img,
-.project-figure--full video { /* *** MODIFIED: Added video selector *** */
+.project-figure--full video { 
     width: 100%;
     height: auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -188,15 +190,14 @@ author_profile: false
 /* 2. Download Prevention (Combined) */
 .project-figure--full img,
 .project-figure--full video {
-    /* Prevents right-click 'Save As', drag-and-drop, and selection */
     user-select: none;
     pointer-events: none;
     -webkit-user-drag: none; 
 }
 
-/* --- Figure Hover Effect (applied to the full-width figure/video container) --- */
+/* 3. Hover Effect (Applies the lift and shadow) */
 .project-figure--full:hover img,
-.project-figure--full:hover video { /* *** MODIFIED: Added video selector *** */
+.project-figure--full:hover video { 
     transform: translateY(-5px); 
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2), 
                 0 4px 10px rgba(0, 0, 0, 0.1); 
@@ -205,9 +206,7 @@ author_profile: false
 /* --- Introduction (Below Figure) --- */
 .project-intro--below {
     padding: 0 1rem; 
-    margin-bottom: 1.5rem;
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid var(--border-light);
+    margin-bottom: 0; 
 }
 
 .project-intro--below p {
@@ -247,13 +246,31 @@ author_profile: false
     font-weight: 700;
 }
 
+/* 💡 COLLAPSIBLE TOGGLE LINK */
 .read-more-link {
-    display: inline-block;
+    display: block;
+    width: fit-content;
     color: var(--brand-teal);
     font-weight: 600;
     text-decoration: none;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-light);
     transition: color 0.2s ease;
+}
+
+/* 💡 NEW FANCY SYMBOL STYLING */
+.read-more-link::after { 
+    content: " \25BD"; /* Filled Downward Triangle (▼) */
+    font-size: 0.9em;
+    margin-left: 0.5em;
+    display: inline-block;
+    transition: content 0.3s ease; /* Transition for visual consistency */
+}
+
+.read-more-link.active::after { 
+    content: " \25B3"; /* Filled Upward Triangle (▲) */
 }
 
 .read-more-link:hover {
@@ -261,9 +278,24 @@ author_profile: false
     text-decoration: underline;
 }
 
-/* --- Relevant Publications (Bottom) --- */
+/* --- COLLAPSIBLE PUBLICATION SECTION --- */
 .project-pubs {
     padding: 0 1rem;
+}
+
+/* 💡 HIDES CONTENT BY DEFAULT */
+.publications-collapsible {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+
+/* 💡 EXPANDED STATE (JS adds this class) */
+.publications-collapsible.expanded {
+    max-height: 1000px;
+    opacity: 1;
+    margin-top: 1rem;
 }
 
 .project-pubs h3 {
@@ -333,3 +365,39 @@ author_profile: false
     }
 }
 </style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const toggleLinks = document.querySelectorAll('.toggle-link');
+
+  toggleLinks.forEach(link => {
+    // 1. Initially hide all publications content on page load for graceful transition
+    const targetId = link.getAttribute('data-target');
+    const targetElement = document.querySelector(targetId);
+    if (targetElement) {
+        targetElement.classList.remove('expanded');
+    }
+
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+
+      const targetElement = document.querySelector(this.getAttribute('data-target'));
+
+      if (targetElement) {
+        // 2. Toggle the 'expanded' class on the target content
+        targetElement.classList.toggle('expanded');
+        
+        // 3. Toggle the 'active' class on the link (triggers CSS symbol change)
+        this.classList.toggle('active'); 
+        
+        // 4. Toggle the link text
+        if (targetElement.classList.contains('expanded')) {
+          this.innerHTML = "Hide Relevant Publications"; 
+        } else {
+          this.innerHTML = "See Relevant Publications"; 
+        }
+      }
+    });
+  });
+});
+</script>
