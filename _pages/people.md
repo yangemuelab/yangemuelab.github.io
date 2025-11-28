@@ -178,8 +178,12 @@ author_profile: false
 }
 
 .pi-card a:hover img {
-  transform: translateY(-2px);
-  box-shadow: 0 16px 32px rgba(15, 23, 42, 0.2);
+/* 1. The Lift: Moves the image further up */
+  transform: translateY(-7px); /* Increased lift from -2px */
+  
+  /* 2. The Pop-Up Shadow: Creates a stronger, premium floating shadow */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25), /* Stronger, diffuse shadow */
+              0 5px 10px rgba(0, 0, 0, 0.15);  /* Sharper, closer shadow */
 }
 
 /* PI Name */
@@ -198,14 +202,21 @@ author_profile: false
   background-color: #fff;
   box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
   text-align: center;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  /* IMPORTANT: Keep the transition for a smooth effect */
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out; /* Increased duration to 0.3s for smooth pop */
 }
 
+/* --- THE NEW YOUTUBE-STYLE HOVER EFFECT --- */
 .person-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.16);
-  /* Border turns Teal on hover for modern interaction feel */
-  border-color: var(--brand-teal);
+  /* 1. The Lift: Moves the card slightly up (or forward in z-space) */
+  transform: translateY(-5px); /* Moves the card up by 5 pixels (More lift than your previous -3px) */
+  
+  /* 2. The Pop-Up Shadow: Creates a soft, distinct floating shadow */
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2), /* Larger, diffuse shadow (the 'pop-up' effect) */
+              0 4px 10px rgba(0, 0, 0, 0.1);  /* Sharper shadow near the base */
+
+  /* *** REMOVED: border-color: var(--brand-teal); *** */
+  /* If you want the teal border back, add: border-color: var(--brand-teal); */
 }
 
 .person-photo {
@@ -228,7 +239,7 @@ author_profile: false
 
 /* Person Role */
 .person-role {
-  font-weight: 500;
+  font-weight: 600;
   color: var(--text-medium);
   margin-top: 0.4rem;
   margin-bottom: 0.6rem;
@@ -237,10 +248,17 @@ author_profile: false
 /* Person Education & Focus text */
 .person-edu,
 .person-focus {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: var(--text-medium);
-  margin-bottom: 0.5rem;
-  line-height: 1.5;
+  margin-bottom: 0.3rem;
+  line-height: 1.4;
+  font-style: italic;
+}
+
+/* Ensure the last line before the email link has proper spacing */
+.person-focus:last-of-type,
+.person-edu:last-of-type {
+  margin-bottom: 0.6rem; 
 }
 
 /* Email Link Container */
