@@ -8,7 +8,7 @@ author_profile: false
 {% include base_path %}
 
 <p>
-  We integrate experiments, theoritical andcomputational modeling, 
+  We integrate experiments, theoritical and computational modeling, 
   AI and AM to understand extreme events and extreme conditions. Below are our key research areas.
 </p>
 
@@ -23,7 +23,13 @@ author_profile: false
       </video>
     </div>
     
+    <div class="project-content">
     <div class="project-intro--below">
+      <div class="project-meta-chips">
+        <span>HyFIRE Facility</span>
+        <span>5 km/s shots</span>
+        <span>Flash X-Ray</span>
+      </div>
       <p>This research aims to understand the behavior of brittle rocks subjected to hypervelocity impacts. 
         We use the HyFIRE facility in HEMI at Johns Hopkins University to impact a basalt cube at 5.0 km/s with 
         a 3 mm, aluminum sphere. In-situ diagnostics including ultrahigh speed camerates at 2 millions fps and flash X-ray 
@@ -73,6 +79,7 @@ author_profile: false
         <p>Relevant publications for this project are forthcoming.</p>
       {% endif %}
     </div>
+    </div>
   </div>
 </section>
 
@@ -82,7 +89,14 @@ author_profile: false
     <div class="project-figure--full">
         <img src="{{ '/images/project-2-figure.jpg' | relative_url }}" alt="Figure illustrating Project 2" loading="lazy">
     </div>
+
+    <div class="project-content">
     <div class="project-intro--below">
+      <div class="project-meta-chips">
+        <span>GANs + RL</span>
+        <span>Microstructure Opt.</span>
+        <span>Autonomous Design</span>
+      </div>
       <p>This project explores the use of generative adversarial networks (GANs) and reinforcement learning to autonomously design new composite materials with optimized mechanical properties...</p>
       <ul>
           <li><strong>Key Goal:</strong> Optimize microstructures using neural networks.</li>
@@ -131,6 +145,7 @@ author_profile: false
         <p>Relevant publications for this project are forthcoming.</p>
       {% endif %}
     </div>
+    </div>
   </div>
 </section>
 <style>
@@ -164,18 +179,17 @@ author_profile: false
 
 /* --- Project Card (The Main Container) --- */
 .project-card {
-    /* Base Layout */
     border: 1px solid var(--border-light);
-    border-radius: 8px;
-    padding: 0.5rem 0.5rem 1.5rem 0.5rem; 
+    border-radius: 12px;
+    padding: 1.25rem;
     background-color: #fff;
-    margin-bottom: 2rem;
-    
-    /* 1. Base/Resting Shadow (Subtle) */
+    margin-bottom: 2.5rem;
     box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08); 
-    
-    /* 2. Transition (CRITICAL for smooth animation) */
     transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+    display: grid;
+    grid-template-columns: minmax(280px, 1fr) minmax(320px, 1fr);
+    gap: 1.75rem;
+    align-items: stretch;
 }
 
 /* 💡 ACADEMIC HOVER EFFECT (Clean Lift + White/Gray Glow) */
@@ -196,34 +210,87 @@ author_profile: false
 
 /* --- FULL-WIDTH FIGURE/VIDEO --- */
 .project-figure--full {
-    margin: 0 auto 1.5rem auto; 
-    border-radius: 6px; 
+    position: relative;
+    border-radius: 10px; 
     overflow: hidden;
+    height: 100%;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.18);
+}
+
+.project-figure--full::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(20, 22, 40, 0.15), rgba(0, 191, 165, 0.15));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.project-figure--full::before {
+    content: "\25B6";
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.75rem;
+    color: rgba(255,255,255,0.85);
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+}
+
+.project-figure--full:hover::after,
+.project-figure--full:hover::before {
+    opacity: 1;
+    transform: scale(1);
 }
 
 .project-figure--full img,
 .project-figure--full video { 
     width: 100%;
-    height: auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    object-fit: cover;
     display: block;
-    transition: none; 
-    
-    /* DOWNLOAD PREVENTION (Required for both img and video) */
-    user-select: none; /* Prevents text selection */
-    pointer-events: none; /* Prevents click interaction */
-    -webkit-user-drag: none; /* Prevents drag-and-drop */
+    user-select: none;
+    -webkit-user-drag: none;
+    pointer-events: none;
+}
+
+.project-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
 /* --- Introduction (Below Figure) --- */
 .project-intro--below {
-    padding: 0 1rem; 
+    padding: 0; 
     margin-bottom: 0; 
 }
 
 .project-intro--below p {
     color: var(--text-dark); 
     margin-bottom: 1.25em; 
+}
+
+.project-meta-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.project-meta-chips span {
+    background-color: rgba(0, 191, 165, 0.12);
+    color: var(--brand-teal-dark);
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
 }
 
 .project-intro--below ul {
@@ -260,40 +327,43 @@ author_profile: false
 
 /* 💡 COLLAPSIBLE TOGGLE LINK */
 .read-more-link {
-    display: block;
-    width: fit-content;
-    color: var(--brand-teal) !important; /* FIX: Force Teal color */
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--brand-teal) !important;
     font-weight: 600;
-    text-decoration: none !important; /* FIX: Force no underline */
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid var(--border-light);
-    transition: color 0.2s ease;
+    text-decoration: none !important;
+    margin-top: 0.5rem;
+    border: 1px solid rgba(0,191,165,0.35);
+    border-radius: 999px;
+    padding: 0.45rem 0.95rem;
+    transition: all 0.2s ease;
     cursor: pointer;
+    background-color: rgba(0,191,165,0.08);
 }
 
 .read-more-link:hover {
-    color: var(--brand-teal-dark) !important; /* FIX: Ensure hover color applies */
-    text-decoration: none !important; /* FIX: Ensure no underline on hover */
+    color: #fff !important;
+    text-decoration: none !important;
+    background-color: var(--brand-teal);
+    border-color: var(--brand-teal);
 }
 
-/* 💡 NEW FANCY SYMBOL STYLING */
 .read-more-link::after { 
-    content: " \25BD"; /* Filled Downward Triangle (▼) */
-    font-size: 0.9em;
-    margin-left: 0.25em;
-    display: inline-block;
+    content: "\25BC";
+    font-size: 0.85em;
     transition: transform 0.3s ease;
 }
 
 .read-more-link.active::after { 
-    content: " \25B3"; /* Filled Upward Triangle (▲) */
+    transform: rotate(180deg);
 }
 
 /* --- COLLAPSIBLE PUBLICATION SECTION --- */
 .project-pubs {
-    padding: 0 1rem;
+    padding: 1rem 0 0 0;
+    border-top: 1px solid var(--border-light);
+    margin-top: 0.5rem;
 }
 
 /* 💡 HIDES CONTENT BY DEFAULT */
@@ -372,10 +442,15 @@ author_profile: false
         font-size: 1.25rem;
     }
     .project-card {
-        padding: 0.5rem 0.25rem 1rem 0.25rem;
+        grid-template-columns: 1fr;
+        padding: 1rem;
+        gap: 1.25rem;
+    }
+    .project-figure--full {
+        height: 240px;
     }
     .project-intro--below, .project-pubs {
-        padding: 0 0.75rem;
+        padding: 0;
     }
 }
 </style>
