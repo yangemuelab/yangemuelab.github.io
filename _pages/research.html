@@ -182,21 +182,11 @@ author_profile: false
     overflow: hidden;
 }
 
-.project-card::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: 12px;
-    background: linear-gradient(135deg, rgba(31, 58, 95, 0), rgba(0, 191, 165, 0.18));
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
-}
-
 /* 💡 ACADEMIC HOVER EFFECT (Clean Lift + White/Gray Glow) */
 .project-card:hover {
     /* 1. LIFT: Elevates the whole card */
     transform: translateY(-5px); 
+    border-color: var(--border-light);
     
     /* 2. POP-UP SHADOW: Layered for professional depth and highlight */
     box-shadow: 
@@ -205,13 +195,9 @@ author_profile: false
         0 4px 10px rgba(0, 0, 0, 0.08),  
         
         /* Crisp Outline Glow (The clean highlight) */
-        0 0 0 2px rgba(220, 220, 220, 0.8), 
         0 0 10px 1px rgba(0, 0, 0, 0.05); 
 }
 
-.project-card:hover::after {
-    opacity: 1;
-}
 
 /* --- FULL-WIDTH FIGURE/VIDEO --- */
 .project-figure--full {
@@ -219,7 +205,6 @@ author_profile: false
     border-radius: 10px; 
     overflow: hidden;
     width: 100%;
-    max-height: 420px;
     box-shadow: 0 10px 25px rgba(15, 23, 42, 0.18);
 }
 
