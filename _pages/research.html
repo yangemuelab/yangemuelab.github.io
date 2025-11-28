@@ -8,7 +8,8 @@ author_profile: false
 {% include base_path %}
 
 <p>
-  We integrate experiments, theory, computational modeling, AI and AM to understand extreme events and extreme conditions. Below are our key research areas.
+  We integrate experiments, theoritical andcomputational modeling, 
+  AI and AM to understand extreme events and extreme conditions. Below are our key research areas.
 </p>
 
 <section class="research-section" id="project-one">
@@ -167,8 +168,22 @@ author_profile: false
     border-radius: 8px;
     padding: 0.5rem 0.5rem 1.5rem 0.5rem; 
     background-color: #fff;
-    box-shadow: var(--card-shadow);
+    
+    /* 1. Base/Resting Shadow (Subtle) */
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08); 
     margin-bottom: 2rem;
+    
+    /* 2. ADD TRANSITION TO THE ENTIRE CARD */
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+/* 💡 HOVER EFFECT APPLIED TO THE ENTIRE CARD (YouTube Style) */
+.project-card:hover {
+    transform: translateY(-5px); /* LIFT the whole card up by 5px */
+    
+    /* POP-UP SHADOW: Layered for depth */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2), 
+                0 4px 10px rgba(0, 0, 0, 0.1); 
 }
 
 /* --- FULL-WIDTH FIGURE/VIDEO --- */
@@ -184,23 +199,12 @@ author_profile: false
     height: auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: block;
-    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
-}
-
-/* 2. Download Prevention (Combined) */
-.project-figure--full img,
-.project-figure--full video {
-    user-select: none;
-    pointer-events: none;
-    -webkit-user-drag: none; 
-}
-
-/* 3. Hover Effect (Applies the lift and shadow) */
-.project-figure--full:hover img,
-.project-figure--full:hover video { 
-    transform: translateY(-5px); 
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2), 
-                0 4px 10px rgba(0, 0, 0, 0.1); 
+    transition: none; 
+    
+    /* DOWNLOAD PREVENTION (Required for both img and video) */
+    user-select: none; /* Prevents text selection */
+    pointer-events: none; /* Prevents click interaction */
+    -webkit-user-drag: none; /* Prevents drag-and-drop */
 }
 
 /* --- Introduction (Below Figure) --- */
