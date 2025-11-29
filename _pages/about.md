@@ -11,7 +11,7 @@ redirect_from:
 
 <div class="home-intro-media">
   <img src="/images/ImpactLoading.jpg" alt="Impact Loading Scenarios in Life and Lab">
-  <p>"Impact loading scenariors in life and laboratory"</p>
+  <p>"Some extreme loading scenariors"</p>
 </div>
 
 <div class="home-intro-text">
@@ -84,7 +84,7 @@ redirect_from:
 /* Intro Media Section */
 .home-intro-media {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   margin-top: 10px;
 }
 
