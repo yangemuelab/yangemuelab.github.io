@@ -17,10 +17,13 @@ author_profile: false
   <div class="project-card">
     
     <div class="project-figure--full">
-      <video autoplay loop muted playsinline>
-          <source src="{{ '/research/Hypervelocity_Impact_into_Rocks.mp4' | relative_url }}" type="video/mp4">
-          Your browser does not support the video tag.
-      </video>
+      <figure>
+        <video autoplay loop muted playsinline>
+            <source src="{{ '/research/Hypervelocity_Impact_into_Rocks.mp4' | relative_url }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <figcaption> Credit: Minh, Justin, and K.T. from JHU</figcaption>
+      </figure>
     </div>
     
     <div class="project-content">
@@ -81,7 +84,10 @@ author_profile: false
   <h2>Project 2: Mechanism-based Constitutive Model for Competent Rocks</h2>
   <div class="project-card">
     <div class="project-figure--full">
+      <figure>
         <img src="{{ '/research/Mechanism-based_constitutive_model.jpg' | relative_url }}" alt="Figure illustrating Project 2" loading="lazy">
+        <figcaption>Modified from Baumgarten et al. JMPS (2024) </figcaption>
+      </figure>
     </div>
 
     <div class="project-content">
@@ -144,7 +150,10 @@ author_profile: false
   <h2>Project 3: Phenomenological Constitutive Model for Rocks</h2>
   <div class="project-card">
     <div class="project-figure--full">
+      <figure>
         <img src="{{ '/research/PhenomenologicalRock.jpg' | relative_url }}" alt="Figure illustrating Project 3" loading="lazy">
+        <figcaption>Blast experiment from Dr. Banadaki's doctoral dissertation</figcaption>
+      </figure>
     </div>
 
     <div class="project-content">
@@ -157,11 +166,9 @@ author_profile: false
       </div>
       <p>This work proposes a phenomenological constitutive model for rocks subjected to dynamic loading. The model
         considers the effects of confining pressure and strain rate on the strength and strain softening behaviors of rock. 
-        It also treats the tensile and compressive damages, both related deviatoric and volumetric deformations. 
-        Fractionally-associated flow rule and lode-angle dependency are employed to capture the shear dilation behaviour of rock. 
-        The model can simulate the behavior of rock under various dynamic loading scenarios, including Kolsky bar, projectile impact, and blast.
-        Compared with the commonly used phenomenological models in commerical software, 
-        our model requires lesser parameters and has higher comuptation efficiency.
+        It also treats the tensile and compressive damages, both related deviatoric and volumetric deformations, seperately.
+        Compared with the commonly used phenomenological models in commerical software, our model requires lesser parameters 
+        and has higher a comuptational efficiency.
       </p>
       
     </div>
@@ -281,6 +288,11 @@ author_profile: false
     display: none;
 }
 
+.project-figure--full figure {
+    margin: 0;
+    padding: 0;
+}
+
 .project-figure--full img,
 .project-figure--full video { 
     width: 100%;
@@ -292,6 +304,18 @@ author_profile: false
     
     /* CRITICAL: Must be set to 'none' since the parent card handles the transition */
     transition: none; 
+}
+
+.project-figure--full figcaption {
+    font-size: 0.875rem;
+    color: var(--text-medium);
+    text-align: center;
+    padding: 0.75rem 1rem;
+    margin-top: 0.5rem;
+    line-height: 1.5;
+    font-style: italic;
+    border-top: 1px solid var(--border-light);
+    padding-top: 0.75rem;
 }
 
 .project-content {
