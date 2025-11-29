@@ -11,12 +11,12 @@ redirect_from:
 
 <div class="home-intro-media">
   <img src="/images/ImpactLoading.jpg" alt="Impact Loading Scenarios in Life and Lab">
-  <p>"EMUE - Extreme Mechanics for Underground Engineering"</p>
+  <p>"Impact loading scenariors in life and laboratory"</p>
 </div>
 
 <div class="home-intro-text">
   <p>
-    Welcome to the EMUE Lab in the College of Civil and Transportation Engineering at Shenzhen University. Our mission is to <strong>see, understand, predict, and design the behavior of structural materials (rocks, concrete, and high-performance composites) under extreme loading conditions</strong>, through a combination of experiments, physics-based theoretical and computational modeling, artifical intelligence, and additive manufacturing. Our goal is to ensure the success and safety of real-world applications in critical sectors where extreme loading scenarios prevail. We are particularly interested in applying our foundamental research to <strong>underground engineering</strong>, but our research also has wide applications in defense, energy, and space. You can explore our current work on our <a href="/research/">Research</a> and <a href="/publications/">Publications</a> pages.
+    Welcome to the EMUE (Extreme Mechanics for Underground Engineering) Lab in the College of Civil and Transportation Engineering at Shenzhen University. Our mission is to <strong>see, understand, predict, and design the behavior of structural materials (rocks, concrete, and high-performance composites) under extreme loading conditions (such as impact, shock and blast)</strong>, through a combination of experiments, physics-based theoretical and computational modeling, artifical intelligence, and additive manufacturing. Our goal is to ensure the success and safety of real-world applications in critical sectors where extreme loading scenarios prevail. We are particularly interested in applying our foundamental research to <strong>underground engineering</strong>, but our research also has wide applications in defense, energy, and space. You can explore our current work on our <a href="/research/">Research</a> and <a href="/publications/">Publications</a> pages.
   </p>
 </div>
 
@@ -85,7 +85,7 @@ redirect_from:
 .home-intro-media {
   text-align: center;
   margin-bottom: 2rem;
-  margin-top: 0;
+  margin-top: 10px;
 }
 
 .home-intro-media img {
