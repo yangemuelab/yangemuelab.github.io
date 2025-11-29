@@ -31,6 +31,7 @@
   year: 2025
   journal_url: "https://doi.org/10.1029/2024JB031101"
   scholar_url: "https://scholar.google.com/scholar?hl=zh-CN&as_sdt=0%2C5&q=A+Mechanism-Based+Constitutive+Model+for+Competent+Rocks+Subjected+to+Impact+Loading&btnG="
+  project: "project-two"
 
 - title: "Extended finite element-based cohesive zone method for modeling simultaneous hydraulic fracture height growth in layered reservoirs"
   authors: "Lei Yang, Baixi Chen"

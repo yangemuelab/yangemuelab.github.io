@@ -78,25 +78,26 @@ author_profile: false
 </section>
 
 <section class="research-section" id="project-two">
-  <h2>Project 2: AI-Driven Composite Design</h2>
+  <h2>Project 2: Mechanism-based Constitutive Model for Competent Rocks</h2>
   <div class="project-card">
     <div class="project-figure--full">
-        <img src="{{ '/images/project-2-figure.jpg' | relative_url }}" alt="Figure illustrating Project 2" loading="lazy">
+        <img src="{{ '/research/Mechanism-based_constitutive_model.jpg' | relative_url }}" alt="Figure illustrating Project 2" loading="lazy">
     </div>
 
     <div class="project-content">
     <div class="project-intro--below">
       <div class="project-meta-chips">
-        <span>GANs + RL</span>
-        <span>Microstructure Opt.</span>
-        <span>Autonomous Design</span>
+        <span>Microcracking Damage</span>
+        <span>Lattice Plasticity</span>
+        <span>Granular flow</span>
       </div>
-      <p>This project explores the use of generative adversarial networks (GANs) and reinforcement learning to autonomously design new composite materials with optimized mechanical properties...</p>
-      <ul>
-          <li><strong>Key Goal:</strong> Optimize microstructures using neural networks.</li>
-          <li><strong>Method:</strong> Generative Adversarial Networks (GANs).</li>
-      </ul>
-      
+      <p>This project develops a mechanism-based consistutive model for competent rocks subjected to impact loading.
+        The model incorprates elasticity, microcracking-induced damage, granular flow, bulking, lattice plasticity and 
+        equation of state within a thermodynamically-consistent finite deformation framework. Most of its parameters 
+        can be either measured directly from experiments or sourced from reported sub-scale simulations. Compared with phenomenological
+        constitutive models, our mechanism-based model can predict the extreme loading conditions beyond the calibrated scenarios. 
+        It has the potential to improve our understanding of geological processes and to enhance efficiency in various applications.
+      </p>
       
     </div>
     </div>
@@ -203,7 +204,7 @@ author_profile: false
 /* --- FULL-WIDTH FIGURE/VIDEO --- */
 .project-figure--full {
     position: relative;
-    border-radius: 10px; 
+    border-radius: 0; 
     overflow: hidden;
     width: 100%;
     box-shadow: 0 10px 25px rgba(15, 23, 42, 0.18);
@@ -379,6 +380,20 @@ author_profile: false
         grid-row: 2;
         padding-top: 1.25rem;
         border-top: 2px solid var(--border-light);
+    }
+}
+
+/* Mobile-friendly spacing tweaks for research cards */
+@media (max-width: 850px) {
+    .project-card {
+        padding: 1rem;
+        gap: 1.25rem;
+    }
+    .project-intro--below {
+        padding: 0.25rem 0.25rem 0 0.25rem;
+    }
+    .project-pubs {
+        padding: 0.75rem 0.25rem 0.25rem 0.25rem;
     }
 }
 
