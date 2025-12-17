@@ -216,7 +216,7 @@ author_profile: false
   <ul class="opportunities-list">
     <li>The Foundations: Who are the "titans" in your research area, and what have they already solved?</li>
     <li>The Paradox: What is the critical research gap in the current literature?</li>
-    <li>THe Barrier: Why is this problem important, and what challenges have prevented it from being solved until now?</li>
+    <li>The Barrier: Why is this problem important, and what challenges have prevented it from being solved until now?</li>
     <li>The Innovation: How will you push the boundary, and why you?</li>
     <li>The Discovery: What questions will you be able to answer with your results?</li>
   </ul>
