@@ -240,7 +240,7 @@ author_profile: false
     </p>
 
     <p>
-      To ensure our work has lasting impact, we look for candidates who enjoy asking the following questions:
+      To ensure our work has lasting impact, we look for candidates who can constantly challenge themselves with the following questions:
     </p>
     
     <ul>
