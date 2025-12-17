@@ -208,16 +208,19 @@ author_profile: false
 }
 </style>
 
-<div class="opportunities-intro">
+<div class="opportunities-intro" markdown="1">
 
   Our group is diverse and interdisciplinary. We bridge the gap between basic and applied research, focusing on the fundamental physics and mechanisms that drive real-world applications. We respect each member's individual research interests and pride ourselves on a highly supportive culture. Our research ethos is simple: <strong>we do things right rather than fast</strong>.
 
   To ensure our work has lasting impact, we constantly challenge ourselves with the following questions:
-  - The Foundations: Who are the "titans" in your research area, and what have they already solved?
-  - The Paradox: What is the critical research gap in the current literature?
-  - The Barrier: Why is this problem important and has not been done?
-  - The Innovation: How will you push the boundary, and why you?
-  - The Discovery: What questions will you be able to answer with your results?
+
+  <ul class="opportunities-list">
+    <li>The Foundations: Who are the "titans" in your area?</li>
+    <li>The Paradox: What is the critical research gap in the current literature?</li>
+    <li>The Barrier: Why is this problem important and has not been done?</li>
+    <li>The Innovation: How will you push the boundary, and why you?</li>
+    <li>The Discovery: What questions will you be able to answer with your results?</li>
+  </ul>
   
 </div>
 
